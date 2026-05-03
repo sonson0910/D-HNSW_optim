@@ -1,0 +1,71 @@
+[package]
+name = "dhnsw"
+version = "0.1.0"
+edition = "2021"
+authors = ["D-HNSW Research Team"]
+description = "Deterministic HNSW: Bit-exact reproducible approximate nearest neighbor search using fixed-point integer arithmetic"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/dhnsw/dhnsw-artifact"
+keywords = ["hnsw", "ann", "deterministic", "fixed-point", "blockchain"]
+categories = ["algorithms", "science"]
+
+[dependencies]
+# Fixed-point arithmetic
+fixed = "1.28"
+# Deterministic hashing (Keccak-256)
+tiny-keccak = { version = "2.0", features = ["keccak"] }
+sha2 = "0.10"
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3"
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+# HDF5 dataset reading
+hdf5 = { version = "0.8", optional = true }
+# Logging
+log = "0.4"
+env_logger = "0.10"
+# Random (deterministic seeding only)
+rand = "0.8"
+rand_chacha = "0.3"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[features]
+default = ["simd"]
+simd = []
+scalar = []
+datasets = ["hdf5"]
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.bench]
+inherits = "release"
+debug = true
+
+[[bench]]
+name = "ablation_benchmark"
+harness = false
+
+[[bench]]
+name = "cross_arch_verification"
+harness = false
+
+[[bench]]
+name = "recall_benchmark"
+harness = false
+
+[[bin]]
+name = "dhnsw"
+path = "src/main.rs"
+
+[[bin]]
+name = "llm_experiment"
+path = "src/bin/llm_experiment.rs"

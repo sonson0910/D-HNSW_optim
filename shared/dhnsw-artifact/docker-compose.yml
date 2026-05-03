@@ -1,0 +1,102 @@
+version: "3.8"
+
+# ============================================================
+#  D-HNSW Artifact Evaluation — Docker Compose
+#  Quick start for reviewers:
+#    docker compose up              # Full evaluation (~2-4h)
+#    docker compose run dhnsw-quick # Quick smoke test (~10min)
+#    docker compose run dhnsw-verify # Determinism only (~5min)
+# ============================================================
+
+services:
+  # Full artifact evaluation
+  dhnsw-full:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["--full"]
+    volumes:
+      - ./output:/artifact/output
+      - ./datasets:/artifact/datasets
+    environment:
+      - RUST_LOG=info
+      - RAYON_NUM_THREADS=4
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+          cpus: "4"
+
+  # Quick smoke test (~10 minutes)
+  dhnsw-quick:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["--quick"]
+    volumes:
+      - ./output:/artifact/output
+      - ./datasets:/artifact/datasets
+    profiles:
+      - quick
+
+  # Determinism verification only (~5 minutes)
+  dhnsw-verify:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["--verify"]
+    volumes:
+      - ./output:/artifact/output
+      - ./datasets:/artifact/datasets
+    profiles:
+      - verify
+
+  # Cross-architecture test only
+  dhnsw-cross:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["--cross"]
+    volumes:
+      - ./output:/artifact/output
+      - ./datasets:/artifact/datasets
+    profiles:
+      - cross
+
+  # Performance benchmarks only
+  dhnsw-bench:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["--bench"]
+    volumes:
+      - ./output:/artifact/output
+      - ./datasets:/artifact/datasets
+    deploy:
+      resources:
+        limits:
+          memory: 16G
+          cpus: "8"
+    profiles:
+      - bench
+
+  # Native cross-platform verification (x86-64 + ARM64)
+  # Usage: docker compose --profile cross-native run dhnsw-cross-native
+  # Requires: docker buildx with QEMU or native ARM64 node
+  dhnsw-cross-native:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    command: ["--test-determinism"]
+    volumes:
+      - ./output:/artifact/output
+      - ./cross_platform_results:/artifact/cross_results
+      - ./datasets:/artifact/datasets
+    environment:
+      - RUST_LOG=info
+      - DHNSW_CROSS_PLATFORM=true
+    profiles:
+      - cross-native
