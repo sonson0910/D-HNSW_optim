@@ -1,0 +1,166 @@
+{
+  "sift-1m": {
+    "dataset": "sift-1m",
+    "n_pairs": 10000,
+    "dims": 128,
+    "metric": "l2",
+    "data_range": [
+      0.0,
+      161.0
+    ],
+    "max_abs_value": 169.0,
+    "frac_bits": 20,
+    "scale_factor": 1048576.0,
+    "resolution": 9.5367431640625e-07,
+    "float32_error": {
+      "mean_relative": 0.0,
+      "max_relative": 0.0,
+      "median_relative": 0.0,
+      "p95_relative": 0.0,
+      "p99_relative": 0.0,
+      "order_preservation": 1.0
+    },
+    "i64f32_error": {
+      "mean_relative": 0.0,
+      "max_relative": 0.0,
+      "median_relative": 0.0,
+      "p95_relative": 0.0,
+      "p99_relative": 0.0,
+      "order_preservation": 1.0
+    },
+    "determinism": {
+      "checks": 1000,
+      "passed": 1000,
+      "rate": 1.0
+    },
+    "distance_stats": {
+      "f64_mean": 285003.6751,
+      "f64_std": 110868.02664740336,
+      "f64_min": 0.0,
+      "f64_max": 500407.0
+    }
+  },
+  "glove-100": {
+    "dataset": "glove-100",
+    "n_pairs": 10000,
+    "dims": 100,
+    "metric": "angular",
+    "data_range": [
+      -4.696100234985352,
+      3.244800090789795
+    ],
+    "max_abs_value": 4.696100234985352,
+    "frac_bits": 25,
+    "scale_factor": 33554432.0,
+    "resolution": 2.9802322387695312e-08,
+    "float32_error": {
+      "mean_relative": 69259.08511703518,
+      "max_relative": 444074777.0,
+      "median_relative": 7.915073939006862e-09,
+      "p95_relative": 3.619940174770205e-08,
+      "p99_relative": 6.303591326061928e-08,
+      "order_preservation": 1.0
+    },
+    "i64f32_error": {
+      "mean_relative": 0.00020004138895869636,
+      "max_relative": 1.0,
+      "median_relative": 1.117802509853476e-09,
+      "p95_relative": 3.5915069203749433e-09,
+      "p99_relative": 5.208438371832254e-09,
+      "order_preservation": 1.0
+    },
+    "determinism": {
+      "checks": 1000,
+      "passed": 1000,
+      "rate": 1.0
+    },
+    "distance_stats": {
+      "f64_mean": 0.8734421010799761,
+      "f64_std": 0.12126589475863177,
+      "f64_min": 0.0,
+      "f64_max": 1.3830175933611022
+    }
+  },
+  "fashion-mnist": {
+    "dataset": "fashion-mnist",
+    "n_pairs": 10000,
+    "dims": 784,
+    "metric": "l2",
+    "data_range": [
+      0.0,
+      255.0
+    ],
+    "max_abs_value": 255.0,
+    "frac_bits": 18,
+    "scale_factor": 262144.0,
+    "resolution": 3.814697265625e-06,
+    "float32_error": {
+      "mean_relative": 8.717319845270166e-10,
+      "max_relative": 5.9503794289194745e-08,
+      "median_relative": 0.0,
+      "p95_relative": 0.0,
+      "p99_relative": 5.37642669150808e-08,
+      "order_preservation": 1.0
+    },
+    "i64f32_error": {
+      "mean_relative": 0.0,
+      "max_relative": 0.0,
+      "median_relative": 0.0,
+      "p95_relative": 0.0,
+      "p99_relative": 0.0,
+      "order_preservation": 1.0
+    },
+    "determinism": {
+      "checks": 1000,
+      "passed": 1000,
+      "rate": 1.0
+    },
+    "distance_stats": {
+      "f64_mean": 8906483.1633,
+      "f64_std": 3928253.6202748884,
+      "f64_min": 0.0,
+      "f64_max": 26071949.0
+    }
+  },
+  "gist-960": {
+    "dataset": "gist-960",
+    "n_pairs": 10000,
+    "dims": 960,
+    "metric": "l2",
+    "data_range": [
+      0.0,
+      0.8651999831199646
+    ],
+    "max_abs_value": 0.8651999831199646,
+    "frac_bits": 26,
+    "scale_factor": 67108864.0,
+    "resolution": 1.4901161193847656e-08,
+    "float32_error": {
+      "mean_relative": 3.349656841089091e-08,
+      "max_relative": 1.6467125837401414e-07,
+      "median_relative": 2.8677786410837676e-08,
+      "p95_relative": 8.142827150045037e-08,
+      "p99_relative": 1.0422466084913922e-07,
+      "order_preservation": 1.0
+    },
+    "i64f32_error": {
+      "mean_relative": 5.662251612231305e-09,
+      "max_relative": 6.146926293389962e-08,
+      "median_relative": 4.433866484437939e-09,
+      "p95_relative": 1.5033147146050176e-08,
+      "p99_relative": 2.191621607296979e-08,
+      "order_preservation": 1.0
+    },
+    "determinism": {
+      "checks": 1000,
+      "passed": 1000,
+      "rate": 1.0
+    },
+    "distance_stats": {
+      "f64_mean": 3.745185028205273,
+      "f64_std": 2.00892644171121,
+      "f64_min": 0.0,
+      "f64_max": 25.399490941876742
+    }
+  }
+}

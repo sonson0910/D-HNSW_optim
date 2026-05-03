@@ -1,0 +1,15 @@
+/target/
+/benchmark_data/
+/upload/
+/shared/dhnsw-artifact/
+agent_*_workdir/
+**/*.rlib
+**/*.pdb
+**/*.o
+**/*.obj
+**/*.exe
+**/*.dll
+**/*.so
+**/*.dylib
+*.log
+.DS_Store

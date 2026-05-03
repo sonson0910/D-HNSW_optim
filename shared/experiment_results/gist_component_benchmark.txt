@@ -1,0 +1,207 @@
+# D-HNSW Component Benchmark (no large-scale data)
+# Date: 2026-04-25 05:26:37 UTC
+
+distance_computation/V0_f32/96
+                        time:   [29.455 ns 29.658 ns 29.877 ns]
+distance_computation/V1_I64F32_scalar/96
+                        time:   [276.79 ns 279.99 ns 283.63 ns]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+distance_computation/V2_I64F32_SIMD/96
+                        time:   [69.394 ns 69.944 ns 70.455 ns]
+Found 17 outliers among 100 measurements (17.00%)
+  4 (4.00%) low severe
+  10 (10.00%) low mild
+  3 (3.00%) high mild
+distance_computation/V3_f32_approx/96
+                        time:   [297.13 ns 299.88 ns 302.94 ns]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high severe
+distance_computation/V0_f32/128
+                        time:   [42.052 ns 42.486 ns 42.909 ns]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+distance_computation/V1_I64F32_scalar/128
+                        time:   [395.04 ns 401.32 ns 410.21 ns]
+Found 15 outliers among 100 measurements (15.00%)
+  1 (1.00%) low severe
+  3 (3.00%) low mild
+  4 (4.00%) high mild
+  7 (7.00%) high severe
+distance_computation/V2_I64F32_SIMD/128
+                        time:   [92.656 ns 93.682 ns 94.683 ns]
+Found 28 outliers among 100 measurements (28.00%)
+  13 (13.00%) low severe
+  5 (5.00%) low mild
+  6 (6.00%) high mild
+  4 (4.00%) high severe
+distance_computation/V3_f32_approx/128
+                        time:   [417.20 ns 421.07 ns 425.74 ns]
+Found 15 outliers among 100 measurements (15.00%)
+  1 (1.00%) low severe
+  4 (4.00%) low mild
+  3 (3.00%) high mild
+  7 (7.00%) high severe
+distance_computation/V0_f32/784
+                        time:   [357.70 ns 360.86 ns 363.82 ns]
+Found 14 outliers among 100 measurements (14.00%)
+  10 (10.00%) low mild
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+distance_computation/V1_I64F32_scalar/784
+                        time:   [2.3853 µs 2.4102 µs 2.4334 µs]
+Found 22 outliers among 100 measurements (22.00%)
+  12 (12.00%) low severe
+  2 (2.00%) low mild
+  5 (5.00%) high mild
+  3 (3.00%) high severe
+distance_computation/V2_I64F32_SIMD/784
+                        time:   [573.29 ns 584.52 ns 599.02 ns]
+Found 20 outliers among 100 measurements (20.00%)
+  3 (3.00%) low mild
+  9 (9.00%) high mild
+  8 (8.00%) high severe
+distance_computation/V3_f32_approx/784
+                        time:   [2.3094 µs 2.3381 µs 2.3726 µs]
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) high mild
+  2 (2.00%) high severe
+distance_computation/V0_f32/960
+                        time:   [453.55 ns 463.81 ns 473.62 ns]
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+distance_computation/V1_I64F32_scalar/960
+                        time:   [2.8489 µs 2.8909 µs 2.9360 µs]
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+distance_computation/V2_I64F32_SIMD/960
+                        time:   [638.46 ns 645.38 ns 652.88 ns]
+Found 10 outliers among 100 measurements (10.00%)
+  7 (7.00%) high mild
+  3 (3.00%) high severe
+distance_computation/V3_f32_approx/960
+                        time:   [2.8068 µs 2.8327 µs 2.8622 µs]
+Found 13 outliers among 100 measurements (13.00%)
+  6 (6.00%) high mild
+  7 (7.00%) high severe
+
+graph_construction/D-HNSW_build/100
+                        time:   [30.501 ms 31.185 ms 31.704 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
+graph_construction/D-HNSW_build/500
+                        time:   [290.60 ms 294.34 ms 298.58 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+graph_construction/D-HNSW_build/1000
+                        time:   [749.62 ms 831.00 ms 919.26 ms]
+
+search/exact_search/10  time:   [1.9445 ms 2.0708 ms 2.1889 ms]
+search/two_phase_search/10
+                        time:   [5.5953 ms 5.7589 ms 5.8775 ms]
+search/exact_search/64  time:   [4.0115 ms 4.2421 ms 4.5428 ms]
+Found 1 outliers among 50 measurements (2.00%)
+  1 (2.00%) high mild
+search/two_phase_search/64
+                        time:   [9.0615 ms 9.1737 ms 9.2959 ms]
+Found 1 outliers among 50 measurements (2.00%)
+  1 (2.00%) high mild
+search/exact_search/128 time:   [4.3525 ms 4.4397 ms 4.5485 ms]
+Found 8 outliers among 50 measurements (16.00%)
+  5 (10.00%) high mild
+  3 (6.00%) high severe
+search/two_phase_search/128
+                        time:   [10.714 ms 10.864 ms 11.032 ms]
+Found 1 outliers among 50 measurements (2.00%)
+  1 (2.00%) high mild
+search/exact_search/256 time:   [5.3095 ms 5.3867 ms 5.4672 ms]
+Found 1 outliers among 50 measurements (2.00%)
+  1 (2.00%) high mild
+search/two_phase_search/256
+                        time:   [14.544 ms 14.834 ms 15.170 ms]
+Found 12 outliers among 50 measurements (24.00%)
+  5 (10.00%) low severe
+  3 (6.00%) low mild
+  4 (8.00%) high severe
+
+ablation_overhead/V1_naive_exact
+                        time:   [20.778 ms 20.908 ms 21.092 ms]
+Found 3 outliers among 20 measurements (15.00%)
+  3 (15.00%) high mild
+ablation_overhead/V4_two_phase_optimized
+                        time:   [52.839 ms 53.331 ms 53.860 ms]
+
+
+## Build Output
+   Compiling zerocopy v0.8.48
+   Compiling half v2.7.1
+   Compiling ppv-lite86 v0.2.21
+   Compiling ciborium-ll v0.2.2
+   Compiling fixed v1.28.0
+   Compiling rand_chacha v0.3.1
+   Compiling ciborium v0.2.2
+   Compiling rand v0.8.6
+   Compiling criterion v0.5.1
+   Compiling dhnsw v0.1.0 (D:\research_journal\project-e7e8b3bb-workspace\workspace)
+    Finished `bench` profile [optimized + debuginfo] target(s) in 16.54s
+     Running benches\ablation_benchmark.rs (target\release\deps\ablation_benchmark-9be8188551673c7d.exe)
+Gnuplot not found, using plotters backend
+Benchmarking distance_computation/V0_f32/96
+Benchmarking distance_computation/V0_f32/96: Warming up for 3.0000 s
+Benchmarking distance_computation/V0_f32/96: Collecting 100 samples in estimated 5.0001 s (161M iterations)
+Benchmarking distance_computation/V0_f32/96: Analyzing
+Benchmarking distance_computation/V1_I64F32_scalar/96
+Benchmarking distance_computation/V1_I64F32_scalar/96: Warming up for 3.0000 s
+Benchmarking distance_computation/V1_I64F32_scalar/96: Collecting 100 samples in estimated 5.0013 s (18M iterations)
+Benchmarking distance_computation/V1_I64F32_scalar/96: Analyzing
+Benchmarking distance_computation/V2_I64F32_SIMD/96
+Benchmarking distance_computation/V2_I64F32_SIMD/96: Warming up for 3.0000 s
+Benchmarking distance_computation/V2_I64F32_SIMD/96: Collecting 100 samples in estimated 5.0001 s (72M iterations)
+Benchmarking distance_computation/V2_I64F32_SIMD/96: Analyzing
+Benchmarking distance_computation/V3_f32_approx/96
+Benchmarking distance_computation/V3_f32_approx/96: Warming up for 3.0000 s
+Benchmarking distance_computation/V3_f32_approx/96: Collecting 100 samples in estimated 5.0005 s (17M iterations)
+Benchmarking distance_computation/V3_f32_approx/96: Analyzing
+Benchmarking distance_computation/V0_f32/128
+Benchmarking distance_computation/V0_f32/128: Warming up for 3.0000 s
+Benchmarking distance_computation/V0_f32/128: Collecting 100 samples in estimated 5.0001 s (119M iterations)
+Benchmarking distance_computation/V0_f32/128: Analyzing
+Benchmarking distance_computation/V1_I64F32_scalar/128
+Benchmarking distance_computation/V1_I64F32_scalar/128: Warming up for 3.0000 s
+Benchmarking distance_computation/V1_I64F32_scalar/128: Collecting 100 samples in estimated 5.0014 s (13M iterations)
+Benchmarking distance_computation/V1_I64F32_scalar/128: Analyzing
+Benchmarking distance_computation/V2_I64F32_SIMD/128
+Benchmarking distance_computation/V2_I64F32_SIMD/128: Warming up for 3.0000 s
+Benchmarking distance_computation/V2_I64F32_SIMD/128: Collecting 100 samples in estimated 5.0001 s (52M iterations)
+Benchmarking distance_computation/V2_I64F32_SIMD/128: Analyzing
+Benchmarking distance_computation/V3_f32_approx/128
+Benchmarking distance_computation/V3_f32_approx/128: Warming up for 3.0000 s
+Benchmarking distance_computation/V3_f32_approx/128: Collecting 100 samples in estimated 5.0014 s (12M iterations)
+Benchmarking distance_computation/V3_f32_approx/128: Analyzing
+Benchmarking distance_computation/V0_f32/784
+Benchmarking distance_computation/V0_f32/784: Warming up for 3.0000 s
+Benchmarking distance_computation/V0_f32/784: Collecting 100 samples in estimated 5.0000 s (14M iterations)
+Benchmarking distance_computation/V0_f32/784: Analyzing
+Benchmarking distance_computation/V1_I64F32_scalar/784
+Benchmarking distance_computation/V1_I64F32_scalar/784: Warming up for 3.0000 s
+Benchmarking distance_computation/V1_I64F32_scalar/784: Collecting 100 samples in estimated 5.0097 s (2.0M iterations)
+Benchmarking distance_computation/V1_I64F32_scalar/784: Analyzing
+Benchmarking distance_computation/V2_I64F32_SIMD/784
+Benchmarking distance_computation/V2_I64F32_SIMD/784: Warming up for 3.0000 s
+Benchmarking distance_computation/V2_I64F32_SIMD/784: Collecting 100 samples in estimated 5.0026 s (8.9M iterations)
+Benchmarking distance_computation/V2_I64F32_SIMD/784: Analyzing
+Benchmarking distance_computation/V3_f32_approx/784
+Benchmarking distance_computation/V3_f32_approx/784: Warming up for 3.0000 s
+Benchmarking distance_computation/V3_f32_approx/784: Collecting 100 samples in estimated 5.0050 s (2.1M iterations)
+Benchmarking distance_computation/V3_f32_approx/784: Analyzing
+Benchmarking distance_computation/V0_f32/960
+Benchmarking distance_computation/V0_f32/960: Warming up for 3.0000 s
+Benchmarking distance_computation/V0_f32/960: Collecting 100 samples in estimated 5.0000 s (12M iterations)
+Benchmarking distance_computation/V0_f32/960: Analyzing
+Benchmarking distance_computation/V1_I64F32_scalar/960
+Benchmarking distance_computation/V1_I64F32_scalar/960: Warming up for 3.0000 s
+Benchmarking distance_computation/V1_I64F32_scalar/960: Collecting 100 samples in estimated 5.0044 s (1.6M iterations)
+Benchmarking distance_computation/V1_I64F32_scalar/960: Analyzing
+Benchmarking distance_computation/V2_I64F32_SIMD/960
+Benchmarking distance_computation/V2_I64F32_SIMD/960: Warming up for 3.0000 s
+Benchmarking distance_computation/V2_I64F32_SIMD/960: Collecting 1

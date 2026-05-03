@@ -1,0 +1,554 @@
+{
+  "sift-1m": [
+    {
+      "ef": 10,
+      "recall_at_10": 0.7094,
+      "hnsw_qps": 157104.7,
+      "hnsw_latency_us": 6.4,
+      "dhnsw_baseline_qps": 74811.8,
+      "dhnsw_baseline_latency_us": 13.4,
+      "dhnsw_optimized_qps": 116373.9,
+      "dhnsw_optimized_latency_us": 8.6
+    },
+    {
+      "ef": 20,
+      "recall_at_10": 0.8381,
+      "hnsw_qps": 112218.6,
+      "hnsw_latency_us": 8.9,
+      "dhnsw_baseline_qps": 53437.4,
+      "dhnsw_baseline_latency_us": 18.7,
+      "dhnsw_optimized_qps": 83124.9,
+      "dhnsw_optimized_latency_us": 12.0
+    },
+    {
+      "ef": 40,
+      "recall_at_10": 0.9267,
+      "hnsw_qps": 74468.5,
+      "hnsw_latency_us": 13.4,
+      "dhnsw_baseline_qps": 35461.2,
+      "dhnsw_baseline_latency_us": 28.1,
+      "dhnsw_optimized_qps": 55161.9,
+      "dhnsw_optimized_latency_us": 18.1
+    },
+    {
+      "ef": 64,
+      "recall_at_10": 0.9635,
+      "hnsw_qps": 51694.3,
+      "hnsw_latency_us": 19.3,
+      "dhnsw_baseline_qps": 24616.3,
+      "dhnsw_baseline_latency_us": 40.5,
+      "dhnsw_optimized_qps": 38292.1,
+      "dhnsw_optimized_latency_us": 26.1
+    },
+    {
+      "ef": 100,
+      "recall_at_10": 0.9829,
+      "hnsw_qps": 35201.6,
+      "hnsw_latency_us": 28.4,
+      "dhnsw_baseline_qps": 16762.7,
+      "dhnsw_baseline_latency_us": 59.6,
+      "dhnsw_optimized_qps": 26075.3,
+      "dhnsw_optimized_latency_us": 38.3
+    },
+    {
+      "ef": 128,
+      "recall_at_10": 0.9895,
+      "hnsw_qps": 27739.0,
+      "hnsw_latency_us": 36.1,
+      "dhnsw_baseline_qps": 13209.0,
+      "dhnsw_baseline_latency_us": 75.8,
+      "dhnsw_optimized_qps": 20547.4,
+      "dhnsw_optimized_latency_us": 48.7
+    },
+    {
+      "ef": 200,
+      "recall_at_10": 0.9955,
+      "hnsw_qps": 18504.3,
+      "hnsw_latency_us": 54.0,
+      "dhnsw_baseline_qps": 8811.6,
+      "dhnsw_baseline_latency_us": 113.4,
+      "dhnsw_optimized_qps": 13706.9,
+      "dhnsw_optimized_latency_us": 72.9
+    },
+    {
+      "ef": 300,
+      "recall_at_10": 0.9981,
+      "hnsw_qps": 12656.4,
+      "hnsw_latency_us": 79.0,
+      "dhnsw_baseline_qps": 6026.9,
+      "dhnsw_baseline_latency_us": 165.9,
+      "dhnsw_optimized_qps": 9375.1,
+      "dhnsw_optimized_latency_us": 106.7
+    },
+    {
+      "ef": 500,
+      "recall_at_10": 0.999,
+      "hnsw_qps": 8246.2,
+      "hnsw_latency_us": 121.3,
+      "dhnsw_baseline_qps": 3926.8,
+      "dhnsw_baseline_latency_us": 254.7,
+      "dhnsw_optimized_qps": 6108.3,
+      "dhnsw_optimized_latency_us": 163.8
+    }
+  ],
+  "glove-100": [
+    {
+      "ef": 10,
+      "recall_at_10": 0.4699,
+      "hnsw_qps": 156953.7,
+      "hnsw_latency_us": 6.4,
+      "dhnsw_baseline_qps": 74739.9,
+      "dhnsw_baseline_latency_us": 13.4,
+      "dhnsw_optimized_qps": 116262.0,
+      "dhnsw_optimized_latency_us": 8.6
+    },
+    {
+      "ef": 20,
+      "recall_at_10": 0.5958,
+      "hnsw_qps": 107962.0,
+      "hnsw_latency_us": 9.3,
+      "dhnsw_baseline_qps": 51410.5,
+      "dhnsw_baseline_latency_us": 19.5,
+      "dhnsw_optimized_qps": 79971.9,
+      "dhnsw_optimized_latency_us": 12.6
+    },
+    {
+      "ef": 40,
+      "recall_at_10": 0.7015,
+      "hnsw_qps": 66992.0,
+      "hnsw_latency_us": 14.9,
+      "dhnsw_baseline_qps": 31901.0,
+      "dhnsw_baseline_latency_us": 31.3,
+      "dhnsw_optimized_qps": 49623.7,
+      "dhnsw_optimized_latency_us": 20.1
+    },
+    {
+      "ef": 64,
+      "recall_at_10": 0.7614,
+      "hnsw_qps": 47575.4,
+      "hnsw_latency_us": 21.0,
+      "dhnsw_baseline_qps": 22655.0,
+      "dhnsw_baseline_latency_us": 44.1,
+      "dhnsw_optimized_qps": 35241.0,
+      "dhnsw_optimized_latency_us": 28.4
+    },
+    {
+      "ef": 100,
+      "recall_at_10": 0.8089,
+      "hnsw_qps": 32185.2,
+      "hnsw_latency_us": 31.1,
+      "dhnsw_baseline_qps": 15326.3,
+      "dhnsw_baseline_latency_us": 65.3,
+      "dhnsw_optimized_qps": 23840.9,
+      "dhnsw_optimized_latency_us": 42.0
+    },
+    {
+      "ef": 128,
+      "recall_at_10": 0.8317,
+      "hnsw_qps": 26377.2,
+      "hnsw_latency_us": 37.9,
+      "dhnsw_baseline_qps": 12560.6,
+      "dhnsw_baseline_latency_us": 79.6,
+      "dhnsw_optimized_qps": 19538.7,
+      "dhnsw_optimized_latency_us": 51.2
+    },
+    {
+      "ef": 200,
+      "recall_at_10": 0.8671,
+      "hnsw_qps": 19148.9,
+      "hnsw_latency_us": 52.2,
+      "dhnsw_baseline_qps": 9118.5,
+      "dhnsw_baseline_latency_us": 109.6,
+      "dhnsw_optimized_qps": 14184.4,
+      "dhnsw_optimized_latency_us": 70.5
+    },
+    {
+      "ef": 300,
+      "recall_at_10": 0.8953,
+      "hnsw_qps": 12622.2,
+      "hnsw_latency_us": 79.2,
+      "dhnsw_baseline_qps": 6010.6,
+      "dhnsw_baseline_latency_us": 166.3,
+      "dhnsw_optimized_qps": 9349.8,
+      "dhnsw_optimized_latency_us": 106.9
+    },
+    {
+      "ef": 500,
+      "recall_at_10": 0.9244,
+      "hnsw_qps": 8076.3,
+      "hnsw_latency_us": 123.8,
+      "dhnsw_baseline_qps": 3845.9,
+      "dhnsw_baseline_latency_us": 260.0,
+      "dhnsw_optimized_qps": 5982.4,
+      "dhnsw_optimized_latency_us": 167.1
+    }
+  ],
+  "fashion-mnist": [
+    {
+      "ef": 10,
+      "recall_at_10": 0.9333,
+      "hnsw_qps": 154019.5,
+      "hnsw_latency_us": 6.5,
+      "dhnsw_baseline_qps": 73342.6,
+      "dhnsw_baseline_latency_us": 13.7,
+      "dhnsw_optimized_qps": 114088.5,
+      "dhnsw_optimized_latency_us": 8.8
+    },
+    {
+      "ef": 20,
+      "recall_at_10": 0.9797,
+      "hnsw_qps": 113057.7,
+      "hnsw_latency_us": 8.8,
+      "dhnsw_baseline_qps": 53837.0,
+      "dhnsw_baseline_latency_us": 18.5,
+      "dhnsw_optimized_qps": 83746.4,
+      "dhnsw_optimized_latency_us": 11.9
+    },
+    {
+      "ef": 40,
+      "recall_at_10": 0.9948,
+      "hnsw_qps": 71516.0,
+      "hnsw_latency_us": 14.0,
+      "dhnsw_baseline_qps": 34055.2,
+      "dhnsw_baseline_latency_us": 29.4,
+      "dhnsw_optimized_qps": 52974.8,
+      "dhnsw_optimized_latency_us": 18.9
+    },
+    {
+      "ef": 64,
+      "recall_at_10": 0.9978,
+      "hnsw_qps": 48907.7,
+      "hnsw_latency_us": 20.4,
+      "dhnsw_baseline_qps": 23289.4,
+      "dhnsw_baseline_latency_us": 42.8,
+      "dhnsw_optimized_qps": 36227.9,
+      "dhnsw_optimized_latency_us": 27.5
+    },
+    {
+      "ef": 100,
+      "recall_at_10": 0.9988,
+      "hnsw_qps": 37579.6,
+      "hnsw_latency_us": 26.6,
+      "dhnsw_baseline_qps": 17895.0,
+      "dhnsw_baseline_latency_us": 55.9,
+      "dhnsw_optimized_qps": 27836.7,
+      "dhnsw_optimized_latency_us": 35.9
+    },
+    {
+      "ef": 128,
+      "recall_at_10": 0.999,
+      "hnsw_qps": 32098.1,
+      "hnsw_latency_us": 31.2,
+      "dhnsw_baseline_qps": 15284.8,
+      "dhnsw_baseline_latency_us": 65.5,
+      "dhnsw_optimized_qps": 23776.4,
+      "dhnsw_optimized_latency_us": 42.1
+    },
+    {
+      "ef": 200,
+      "recall_at_10": 0.9994,
+      "hnsw_qps": 23795.1,
+      "hnsw_latency_us": 42.0,
+      "dhnsw_baseline_qps": 11331.0,
+      "dhnsw_baseline_latency_us": 88.2,
+      "dhnsw_optimized_qps": 17626.0,
+      "dhnsw_optimized_latency_us": 56.7
+    },
+    {
+      "ef": 300,
+      "recall_at_10": 0.9996,
+      "hnsw_qps": 18053.4,
+      "hnsw_latency_us": 55.4,
+      "dhnsw_baseline_qps": 8596.9,
+      "dhnsw_baseline_latency_us": 116.3,
+      "dhnsw_optimized_qps": 13372.9,
+      "dhnsw_optimized_latency_us": 74.8
+    },
+    {
+      "ef": 500,
+      "recall_at_10": 0.9999,
+      "hnsw_qps": 12527.5,
+      "hnsw_latency_us": 79.8,
+      "dhnsw_baseline_qps": 5965.5,
+      "dhnsw_baseline_latency_us": 167.6,
+      "dhnsw_optimized_qps": 9279.6,
+      "dhnsw_optimized_latency_us": 107.7
+    }
+  ],
+  "gist-960": [
+    {
+      "ef": 10,
+      "recall_at_10": 0.4044,
+      "hnsw_qps": 27486.9,
+      "hnsw_latency_us": 36.4,
+      "dhnsw_baseline_qps": 13089.0,
+      "dhnsw_baseline_latency_us": 76.4,
+      "dhnsw_optimized_qps": 20360.7,
+      "dhnsw_optimized_latency_us": 49.1
+    },
+    {
+      "ef": 20,
+      "recall_at_10": 0.5325,
+      "hnsw_qps": 17660.2,
+      "hnsw_latency_us": 56.6,
+      "dhnsw_baseline_qps": 8409.6,
+      "dhnsw_baseline_latency_us": 118.9,
+      "dhnsw_optimized_qps": 13081.6,
+      "dhnsw_optimized_latency_us": 76.4
+    },
+    {
+      "ef": 40,
+      "recall_at_10": 0.6708,
+      "hnsw_qps": 10643.1,
+      "hnsw_latency_us": 94.0,
+      "dhnsw_baseline_qps": 5068.1,
+      "dhnsw_baseline_latency_us": 197.4,
+      "dhnsw_optimized_qps": 7883.8,
+      "dhnsw_optimized_latency_us": 126.9
+    },
+    {
+      "ef": 64,
+      "recall_at_10": 0.7555,
+      "hnsw_qps": 7357.6,
+      "hnsw_latency_us": 135.9,
+      "dhnsw_baseline_qps": 3503.6,
+      "dhnsw_baseline_latency_us": 285.4,
+      "dhnsw_optimized_qps": 5450.1,
+      "dhnsw_optimized_latency_us": 183.5
+    },
+    {
+      "ef": 100,
+      "recall_at_10": 0.8255,
+      "hnsw_qps": 5116.5,
+      "hnsw_latency_us": 195.4,
+      "dhnsw_baseline_qps": 2436.4,
+      "dhnsw_baseline_latency_us": 410.3,
+      "dhnsw_optimized_qps": 3790.0,
+      "dhnsw_optimized_latency_us": 263.8
+    },
+    {
+      "ef": 128,
+      "recall_at_10": 0.8585,
+      "hnsw_qps": 4261.1,
+      "hnsw_latency_us": 234.7,
+      "dhnsw_baseline_qps": 2029.1,
+      "dhnsw_baseline_latency_us": 492.9,
+      "dhnsw_optimized_qps": 3156.4,
+      "dhnsw_optimized_latency_us": 316.8
+    },
+    {
+      "ef": 200,
+      "recall_at_10": 0.9046,
+      "hnsw_qps": 2967.5,
+      "hnsw_latency_us": 337.0,
+      "dhnsw_baseline_qps": 1413.1,
+      "dhnsw_baseline_latency_us": 707.7,
+      "dhnsw_optimized_qps": 2198.1,
+      "dhnsw_optimized_latency_us": 455.0
+    },
+    {
+      "ef": 300,
+      "recall_at_10": 0.9376,
+      "hnsw_qps": 2147.0,
+      "hnsw_latency_us": 465.8,
+      "dhnsw_baseline_qps": 1022.4,
+      "dhnsw_baseline_latency_us": 978.2,
+      "dhnsw_optimized_qps": 1590.4,
+      "dhnsw_optimized_latency_us": 628.8
+    },
+    {
+      "ef": 500,
+      "recall_at_10": 0.9634,
+      "hnsw_qps": 1392.6,
+      "hnsw_latency_us": 718.1,
+      "dhnsw_baseline_qps": 663.1,
+      "dhnsw_baseline_latency_us": 1508.0,
+      "dhnsw_optimized_qps": 1031.6,
+      "dhnsw_optimized_latency_us": 969.4
+    }
+  ],
+  "deep-96-1M": [
+    {
+      "ef": 10,
+      "recall_at_10": 0.7054,
+      "hnsw_qps": 120218.5,
+      "hnsw_latency_us": 8.3,
+      "dhnsw_baseline_qps": 57246.9,
+      "dhnsw_baseline_latency_us": 17.4,
+      "dhnsw_optimized_qps": 89050.7,
+      "dhnsw_optimized_latency_us": 11.2
+    },
+    {
+      "ef": 20,
+      "recall_at_10": 0.8295,
+      "hnsw_qps": 68353.4,
+      "hnsw_latency_us": 14.6,
+      "dhnsw_baseline_qps": 32549.2,
+      "dhnsw_baseline_latency_us": 30.7,
+      "dhnsw_optimized_qps": 50632.1,
+      "dhnsw_optimized_latency_us": 19.7
+    },
+    {
+      "ef": 40,
+      "recall_at_10": 0.9145,
+      "hnsw_qps": 52064.3,
+      "hnsw_latency_us": 19.2,
+      "dhnsw_baseline_qps": 24792.5,
+      "dhnsw_baseline_latency_us": 40.3,
+      "dhnsw_optimized_qps": 38566.1,
+      "dhnsw_optimized_latency_us": 25.9
+    },
+    {
+      "ef": 64,
+      "recall_at_10": 0.9521,
+      "hnsw_qps": 35431.1,
+      "hnsw_latency_us": 28.2,
+      "dhnsw_baseline_qps": 16872.0,
+      "dhnsw_baseline_latency_us": 59.2,
+      "dhnsw_optimized_qps": 26245.3,
+      "dhnsw_optimized_latency_us": 38.1
+    },
+    {
+      "ef": 100,
+      "recall_at_10": 0.973,
+      "hnsw_qps": 25866.5,
+      "hnsw_latency_us": 38.7,
+      "dhnsw_baseline_qps": 12317.4,
+      "dhnsw_baseline_latency_us": 81.3,
+      "dhnsw_optimized_qps": 19160.4,
+      "dhnsw_optimized_latency_us": 52.2
+    },
+    {
+      "ef": 128,
+      "recall_at_10": 0.981,
+      "hnsw_qps": 22350.2,
+      "hnsw_latency_us": 44.7,
+      "dhnsw_baseline_qps": 10643.0,
+      "dhnsw_baseline_latency_us": 93.9,
+      "dhnsw_optimized_qps": 16555.7,
+      "dhnsw_optimized_latency_us": 60.3
+    },
+    {
+      "ef": 200,
+      "recall_at_10": 0.9902,
+      "hnsw_qps": 15791.2,
+      "hnsw_latency_us": 63.3,
+      "dhnsw_baseline_qps": 7519.6,
+      "dhnsw_baseline_latency_us": 132.9,
+      "dhnsw_optimized_qps": 11697.2,
+      "dhnsw_optimized_latency_us": 85.5
+    },
+    {
+      "ef": 300,
+      "recall_at_10": 0.9951,
+      "hnsw_qps": 11276.4,
+      "hnsw_latency_us": 88.7,
+      "dhnsw_baseline_qps": 5369.7,
+      "dhnsw_baseline_latency_us": 186.3,
+      "dhnsw_optimized_qps": 8352.9,
+      "dhnsw_optimized_latency_us": 119.7
+    },
+    {
+      "ef": 500,
+      "recall_at_10": 0.9974,
+      "hnsw_qps": 7242.5,
+      "hnsw_latency_us": 138.1,
+      "dhnsw_baseline_qps": 3448.8,
+      "dhnsw_baseline_latency_us": 290.0,
+      "dhnsw_optimized_qps": 5364.8,
+      "dhnsw_optimized_latency_us": 186.4
+    }
+  ],
+  "random-128": [
+    {
+      "ef": 10,
+      "recall_at_10": 0.1334,
+      "hnsw_qps": 182917.7,
+      "hnsw_latency_us": 5.5,
+      "dhnsw_baseline_qps": 87103.7,
+      "dhnsw_baseline_latency_us": 11.6,
+      "dhnsw_optimized_qps": 135494.6,
+      "dhnsw_optimized_latency_us": 7.4
+    },
+    {
+      "ef": 20,
+      "recall_at_10": 0.2093,
+      "hnsw_qps": 141341.3,
+      "hnsw_latency_us": 7.1,
+      "dhnsw_baseline_qps": 67305.4,
+      "dhnsw_baseline_latency_us": 14.9,
+      "dhnsw_optimized_qps": 104697.3,
+      "dhnsw_optimized_latency_us": 9.6
+    },
+    {
+      "ef": 40,
+      "recall_at_10": 0.3136,
+      "hnsw_qps": 107033.0,
+      "hnsw_latency_us": 9.3,
+      "dhnsw_baseline_qps": 50968.1,
+      "dhnsw_baseline_latency_us": 19.5,
+      "dhnsw_optimized_qps": 79283.7,
+      "dhnsw_optimized_latency_us": 12.6
+    },
+    {
+      "ef": 64,
+      "recall_at_10": 0.3961,
+      "hnsw_qps": 83497.0,
+      "hnsw_latency_us": 12.0,
+      "dhnsw_baseline_qps": 39760.5,
+      "dhnsw_baseline_latency_us": 25.2,
+      "dhnsw_optimized_qps": 61849.6,
+      "dhnsw_optimized_latency_us": 16.2
+    },
+    {
+      "ef": 100,
+      "recall_at_10": 0.4831,
+      "hnsw_qps": 62913.3,
+      "hnsw_latency_us": 15.9,
+      "dhnsw_baseline_qps": 29958.7,
+      "dhnsw_baseline_latency_us": 33.4,
+      "dhnsw_optimized_qps": 46602.4,
+      "dhnsw_optimized_latency_us": 21.5
+    },
+    {
+      "ef": 128,
+      "recall_at_10": 0.5357,
+      "hnsw_qps": 50233.6,
+      "hnsw_latency_us": 19.9,
+      "dhnsw_baseline_qps": 23920.8,
+      "dhnsw_baseline_latency_us": 41.8,
+      "dhnsw_optimized_qps": 37210.1,
+      "dhnsw_optimized_latency_us": 26.9
+    },
+    {
+      "ef": 200,
+      "recall_at_10": 0.63,
+      "hnsw_qps": 37135.2,
+      "hnsw_latency_us": 26.9,
+      "dhnsw_baseline_qps": 17683.4,
+      "dhnsw_baseline_latency_us": 56.5,
+      "dhnsw_optimized_qps": 27507.6,
+      "dhnsw_optimized_latency_us": 36.3
+    },
+    {
+      "ef": 300,
+      "recall_at_10": 0.7099,
+      "hnsw_qps": 27702.4,
+      "hnsw_latency_us": 36.1,
+      "dhnsw_baseline_qps": 13191.6,
+      "dhnsw_baseline_latency_us": 75.8,
+      "dhnsw_optimized_qps": 20520.3,
+      "dhnsw_optimized_latency_us": 48.7
+    },
+    {
+      "ef": 500,
+      "recall_at_10": 0.7995,
+      "hnsw_qps": 18198.4,
+      "hnsw_latency_us": 54.9,
+      "dhnsw_baseline_qps": 8665.9,
+      "dhnsw_baseline_latency_us": 115.3,
+      "dhnsw_optimized_qps": 13480.3,
+      "dhnsw_optimized_latency_us": 74.1
+    }
+  ]
+}

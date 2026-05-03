@@ -1,0 +1,36 @@
+# Research Tree - Auto-generated
+# Do not edit manually - synced from Supabase
+
+updated_at: "2026-04-20T12:36:48.843Z"
+node_count: 3
+nodes:
+  - id: n_29611476_im6d
+        type: metadata
+        label: Tài nguyên gốc từ không gian làm việc cũ
+        description: Dự án bắt đầu với tài nguyên từ không gian làm việc cũ được cung cấp dưới dạng tệp nén project-ec00e669-workspace.tar.gz. Mục tiêu ban đầu là tích hợp và kế thừa các kết quả nghiên cứu trước đó.
+        status: completed
+        parent_id: null
+        attributes:
+          uploadedFiles:
+            - path: "./upload/project-ec00e669-workspace.tar.gz"
+                        filename: project-ec00e669-workspace.tar.gz
+  - id: n_29611476_kjup
+        type: main_question
+        label: Tích hợp và phân tích tài nguyên nghiên cứu cũ
+        description: Làm thế nào để phân tích, hiểu và tích hợp hiệu quả các tài nguyên (mã nguồn, dữ liệu, tài liệu) từ không gian làm việc cũ project-ec00e669 vào dự án hiện tại?
+        status: in_progress
+        parent_id: null
+        attributes: {}
+  - id: n_29611476_69kv
+        type: task
+        label: Giải nén và phân tích cấu trúc không gian làm việc cũ
+        description: Thực hiện giải nén tệp project-ec00e669-workspace.tar.gz, phân tích cấu trúc thư mục, xác định các thành phần quan trọng và tóm tắt nội dung để định hướng cho các bước tiếp theo.
+        status: not_started
+        parent_id: null
+        attributes:
+          immediateActions:
+            - id: extract_workspace
+                        icon: play
+                        label: Giải nén và Phân tích
+                        prompt: Giải nén tệp ./upload/project-ec00e669-workspace.tar.gz, liệt kê cấu trúc thư mục, xác định các loại tệp và tóm tắt nội dung.
+edges: []

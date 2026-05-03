@@ -1,0 +1,106 @@
+{
+  "sift-1m": {
+    "dataset": "sift-1m",
+    "n_pairs": 10000,
+    "dims": 128,
+    "float32_error": {
+      "mean_relative": 0.0,
+      "max_relative": 0.0,
+      "median_relative": 0.0,
+      "p99_relative": 0.0,
+      "order_preservation": 1.0
+    },
+    "i64f32_error": {
+      "mean_relative": 0.9996,
+      "max_relative": 1.0,
+      "median_relative": 1.0,
+      "p99_relative": 1.0,
+      "order_preservation": 0.0
+    },
+    "value_ranges": {
+      "f64_mean": 285003.6751,
+      "f64_std": 110868.02664740336,
+      "data_min": 0.0,
+      "data_max": 161.0,
+      "data_mean": 27.93090057373047
+    }
+  },
+  "glove-100": {
+    "dataset": "glove-100",
+    "n_pairs": 10000,
+    "dims": 100,
+    "float32_error": {
+      "mean_relative": 5.2286680865018985e-08,
+      "max_relative": 2.6933114097804215e-07,
+      "median_relative": 4.377151250423713e-08,
+      "p99_relative": 1.7384779434909817e-07,
+      "order_preservation": 1.0
+    },
+    "i64f32_error": {
+      "mean_relative": 0.9995836181768273,
+      "max_relative": 1.0294415839980346,
+      "median_relative": 0.9999740118032296,
+      "p99_relative": 1.012948591959974,
+      "order_preservation": 0.485025
+    },
+    "value_ranges": {
+      "f64_mean": 60.16282654313748,
+      "f64_std": 21.600318688576763,
+      "data_min": -4.696100234985352,
+      "data_max": 3.244800090789795,
+      "data_mean": 0.02633879892528057
+    }
+  },
+  "fashion-mnist": {
+    "dataset": "fashion-mnist",
+    "n_pairs": 10000,
+    "dims": 784,
+    "float32_error": {
+      "mean_relative": 8.713832917332057e-10,
+      "max_relative": 5.9503794289194745e-08,
+      "median_relative": 0.0,
+      "p99_relative": 5.375706526928363e-08,
+      "order_preservation": 1.0
+    },
+    "i64f32_error": {
+      "mean_relative": 0.9996,
+      "max_relative": 1.0,
+      "median_relative": 1.0,
+      "p99_relative": 1.0,
+      "order_preservation": 0.0
+    },
+    "value_ranges": {
+      "f64_mean": 8906483.1633,
+      "f64_std": 3928253.6202748884,
+      "data_min": 0.0,
+      "data_max": 255.0,
+      "data_mean": 72.96734619140625
+    }
+  },
+  "gist-960": {
+    "dataset": "gist-960",
+    "n_pairs": 10000,
+    "dims": 960,
+    "float32_error": {
+      "mean_relative": 3.348316978352655e-08,
+      "max_relative": 1.6467125837401414e-07,
+      "median_relative": 2.8660841526155115e-08,
+      "p99_relative": 1.0421091313868428e-07,
+      "order_preservation": 1.0
+    },
+    "i64f32_error": {
+      "mean_relative": 1.0015305761001072,
+      "max_relative": 1.8626716655292852,
+      "median_relative": 1.0029990138867086,
+      "p99_relative": 1.25798116841593,
+      "order_preservation": 0.529749
+    },
+    "value_ranges": {
+      "f64_mean": 3.745185028205273,
+      "f64_std": 2.00892644171121,
+      "data_min": 0.0,
+      "data_max": 0.8651999831199646,
+      "data_mean": 0.06982843577861786
+    }
+  }
+}

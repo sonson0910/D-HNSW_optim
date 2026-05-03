@@ -1,0 +1,307 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{jegou2011pq}
+\citation{simhadri2022neurips}
+\citation{bentley1975kdtree}
+\citation{gionis1999lsh}
+\citation{jegou2011pq}
+\citation{malkov2014nsw}
+\citation{malkov2020hnsw}
+\citation{simhadri2022neurips}
+\citation{douze2024faiss}
+\citation{goldberg1991float}
+\citation{buterin2014ethereum,lai2022blockchain}
+\citation{cardano2024fees}
+\citation{decenomy2024integer}
+\citation{alves2026eigenai}
+\citation{yao2025nao}
+\citation{keizer2023ditto,lee2024decentface}
+\citation{zhang2024nmft}
+\citation{lu2024annproof}
+\citation{gudur2025valori}
+\citation{alves2026eigenai}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\citation{bertoni2013keccak}
+\citation{bentley1975kdtree}
+\citation{gionis1999lsh}
+\citation{jegou2011pq}
+\citation{baranchuk2018revisiting}
+\citation{malkov2014nsw}
+\citation{malkov2020hnsw}
+\citation{simhadri2022neurips}
+\citation{subramanya2019diskann}
+\citation{karthik2024bang}
+\citation{xu2025harmony}
+\citation{teofili2025patience}
+\citation{buterin2014ethereum}
+\citation{cardano2024fees}
+\citation{decenomy2024integer}
+\citation{lai2022blockchain}
+\citation{olivieri2022golisa}
+\citation{yao2025nao}
+\citation{alves2026eigenai}
+\citation{gudur2025valori}
+\citation{douze2024faiss}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{II}{2}{Related Work}{section.2}{}}
+\newlabel{sec:related@cref}{{[section][2][]II}{[1][2][]2}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Approximate Nearest Neighbor Search}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Deterministic Computation and Blockchain}{2}{subsection.2.2}\protected@file@percent }
+\citation{lu2024annproof}
+\citation{keizer2023ditto}
+\citation{lee2024decentface}
+\citation{zhang2024nmft}
+\citation{malkov2020hnsw}
+\citation{goldberg1991float}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Vector Search on Blockchain}{3}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Background}{3}{section.3}\protected@file@percent }
+\newlabel{sec:background}{{III}{3}{Background}{section.3}{}}
+\newlabel{sec:background@cref}{{[section][3][]III}{[1][3][]3}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}HNSW Algorithm}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{eq:l2dist}{{1}{3}{HNSW Algorithm}{equation.1}{}}
+\newlabel{eq:l2dist@cref}{{[equation][1][]1}{[1][3][]3}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Floating-Point Nondeterminism}{3}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:fp_nondet}{{\mbox  {III-B}}{3}{Floating-Point Nondeterminism}{subsection.3.2}{}}
+\newlabel{sec:fp_nondet@cref}{{[subsection][2][3]\mbox  {III-B}}{[1][3][]3}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Fixed-Point Arithmetic}{3}{subsection.3.3}\protected@file@percent }
+\citation{bertoni2013keccak}
+\citation{gudur2025valori}
+\citation{schoenmakers2023fixedpoint}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}Three Determinism Requirements}{4}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:trilemma}{{\mbox  {III-D}}{4}{Three Determinism Requirements}{subsection.3.4}{}}
+\newlabel{sec:trilemma@cref}{{[subsection][4][3]\mbox  {III-D}}{[1][4][]4}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}D-HNSW: Fixed-Point Distance Framework}{4}{section.4}\protected@file@percent }
+\newlabel{sec:method}{{IV}{4}{D-HNSW: Fixed-Point Distance Framework}{section.4}{}}
+\newlabel{sec:method@cref}{{[section][4][]IV}{[1][4][]4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Q32.32 Fixed-Point Representation}{4}{subsection.4.1}\protected@file@percent }
+\newlabel{eq:fp_encode}{{2}{4}{Q32.32 Fixed-Point Representation}{equation.2}{}}
+\newlabel{eq:fp_encode@cref}{{[equation][2][]2}{[1][4][]4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Vector Representation}{4}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Distance Metrics}{4}{subsection.4.3}\protected@file@percent }
+\newlabel{eq:fp_l2}{{7}{4}{Distance Metrics}{equation.7}{}}
+\newlabel{eq:fp_l2@cref}{{[equation][7][]7}{[1][4][]4}{}{}{}}
+\newlabel{eq:newton}{{8}{4}{Distance Metrics}{equation.8}{}}
+\newlabel{eq:newton@cref}{{[equation][8][]8}{[1][4][]4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Error Analysis}{5}{subsection.4.4}\protected@file@percent }
+\newlabel{thm:error}{{1}{5}{Distance computation error bound}{theorem.1}{}}
+\newlabel{thm:error@cref}{{[theorem][1][]1}{[1][5][]5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Determinism Guarantee}{5}{subsection.4.5}\protected@file@percent }
+\newlabel{thm:determinism}{{2}{5}{Bit-exact reproducibility}{theorem.2}{}}
+\newlabel{thm:determinism@cref}{{[theorem][2][]2}{[1][5][]5}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Performance Optimizations}{5}{section.5}\protected@file@percent }
+\newlabel{sec:optimizations}{{V}{5}{Performance Optimizations}{section.5}{}}
+\newlabel{sec:optimizations@cref}{{[section][5][]V}{[1][5][]5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}SIMD-Accelerated Fixed-Point Operations}{5}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Two-Phase Distance Computation}{5}{subsection.5.2}\protected@file@percent }
+\citation{teofili2025patience}
+\citation{bertoni2013keccak}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Two-phase search comparison on SIFT-128, Fashion-MNIST-784, and GIST-960. The two-phase variants (with different expansion factors $2\times $, $3\times $, $5\times $) achieve $\sim $$1.08\times $ speedup over pure I64F32, narrowing the gap to floating-point \textsc  {HNSW}{}.}}{6}{figure.1}\protected@file@percent }
+\newlabel{fig:two_phase}{{1}{6}{Two-phase search comparison on SIFT-128, Fashion-MNIST-784, and GIST-960. The two-phase variants (with different expansion factors $2\times $, $3\times $, $5\times $) achieve $\sim $$1.08\times $ speedup over pure I64F32, narrowing the gap to floating-point \hnsw {}}{figure.1}{}}
+\newlabel{fig:two_phase@cref}{{[figure][1][]1}{[1][6][]6}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Additional Optimizations}{6}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}Combined Effect}{6}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Deterministic Graph Construction}{6}{section.6}\protected@file@percent }
+\newlabel{sec:construction}{{VI}{6}{Deterministic Graph Construction}{section.6}{}}
+\newlabel{sec:construction@cref}{{[section][6][]VI}{[1][6][]6}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Cumulative effect of optimizations on SIFT-1M ($\texttt  {ef}=128$). Overhead is relative to standard floating-point \textsc  {HNSW}{}.}}{6}{table.1}\protected@file@percent }
+\newlabel{tab:ablation_summary}{{I}{6}{Cumulative effect of optimizations on SIFT-1M ($\texttt {ef}=128$). Overhead is relative to standard floating-point \hnsw {}}{table.1}{}}
+\newlabel{tab:ablation_summary@cref}{{[table][1][]I}{[1][6][]6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Ablation study showing the cumulative effect of each optimization on SIFT-1M. Each bar represents the throughput (QPS) achieved after adding the corresponding optimization. The dashed line indicates standard \textsc  {HNSW}{} throughput.}}{6}{figure.2}\protected@file@percent }
+\newlabel{fig:ablation}{{2}{6}{Ablation study showing the cumulative effect of each optimization on SIFT-1M. Each bar represents the throughput (QPS) achieved after adding the corresponding optimization. The dashed line indicates standard \hnsw {} throughput}{figure.2}{}}
+\newlabel{fig:ablation@cref}{{[figure][2][]2}{[1][6][]6}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Deterministic Level Assignment}{6}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Deterministic Neighbor Selection}{6}{subsection.6.2}\protected@file@percent }
+\citation{jegou2011sift}
+\citation{pennington2014glove}
+\citation{xiao2017fashion}
+\citation{oliva2001gist}
+\citation{babenko2016deep1b}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces \textsc  {D-HNSW}{} Deterministic Search}}{7}{algorithm.1}\protected@file@percent }
+\newlabel{alg:dhnsw_search}{{1}{7}{Algorithm Summary}{algorithm.1}{}}
+\newlabel{alg:dhnsw_search@cref}{{[algorithm][1][]1}{[1][7][]7}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Deterministic Search Order}{7}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-D}}Algorithm Summary}{7}{subsection.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-E}}Complexity Analysis}{7}{subsection.6.5}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces \textsc  {D-HNSW}{} Deterministic Insert}}{7}{algorithm.2}\protected@file@percent }
+\newlabel{alg:dhnsw_insert}{{2}{7}{Algorithm Summary}{algorithm.2}{}}
+\newlabel{alg:dhnsw_insert@cref}{{[algorithm][2][]2}{[1][7][]7}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Experimental Evaluation}{7}{section.7}\protected@file@percent }
+\newlabel{sec:experiments}{{VII}{7}{Experimental Evaluation}{section.7}{}}
+\newlabel{sec:experiments@cref}{{[section][7][]VII}{[1][7][]7}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Experimental Setup}{7}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Recall-Throughput Tradeoff}{8}{subsection.7.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Overview: Recall@10 vs.\ throughput (QPS) Pareto frontier on SIFT-1M, comparing \textsc  {HNSW}{}, \textsc  {D-HNSW}{} baseline, and \textsc  {D-HNSW}{} optimized. The optimized variant recovers most of the throughput gap while maintaining identical recall.}}{8}{figure.3}\protected@file@percent }
+\newlabel{fig:pareto_overview}{{3}{8}{Overview: Recall@10 vs.\ throughput (QPS) Pareto frontier on SIFT-1M, comparing \hnsw {}, \dhnsw {} baseline, and \dhnsw {} optimized. The optimized variant recovers most of the throughput gap while maintaining identical recall}{figure.3}{}}
+\newlabel{fig:pareto_overview@cref}{{[figure][3][]3}{[1][8][]8}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Raw Fixed-Point Overhead}{8}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-D}}Numerical Accuracy}{8}{subsection.7.4}\protected@file@percent }
+\newlabel{sec:error_exp}{{\mbox  {VII-D}}{8}{Numerical Accuracy}{subsection.7.4}{}}
+\newlabel{sec:error_exp@cref}{{[subsection][4][7]\mbox  {VII-D}}{[1][8][]8}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Recall@10 vs.\ throughput (QPS) Pareto curves for all six datasets. \textsc  {HNSW}{} (blue), \textsc  {D-HNSW}{} baseline (red), and \textsc  {D-HNSW}{} optimized (green). \textsc  {D-HNSW}{} achieves identical recall at every operating point. The SIMD-accelerated distance overhead of $1.52\times $--$2.44\times $ (\Cref  {tab:dist_overhead}) translates to projected end-to-end search overhead of $1.39\times $--$1.75\times $ via Amdahl's law (see \Cref  {tab:main_results}).}}{9}{figure.4}\protected@file@percent }
+\newlabel{fig:pareto}{{4}{9}{Recall@10 vs.\ throughput (QPS) Pareto curves for all six datasets. \hnsw {} (blue), \dhnsw {} baseline (red), and \dhnsw {} optimized (green). \dhnsw {} achieves identical recall at every operating point. The SIMD-accelerated distance overhead of $1.52\times $--$2.44\times $ (\Cref {tab:dist_overhead}) translates to projected end-to-end search overhead of $1.39\times $--$1.75\times $ via Amdahl's law (see \Cref {tab:main_results})}{figure.4}{}}
+\newlabel{fig:pareto@cref}{{[figure][4][]4}{[1][8][]9}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Projected performance comparison at $\texttt  {ef} = 128$. End-to-end overhead is derived from measured SIMD distance overhead (\Cref  {tab:dist_overhead}) via Amdahl's law with per-dimensionality distance fraction $\alpha $ (calibrated from ablation study). Recall@10 is identical for all configurations.}}{9}{table.2}\protected@file@percent }
+\newlabel{tab:main_results}{{II}{9}{Projected performance comparison at $\texttt {ef} = 128$. End-to-end overhead is derived from measured SIMD distance overhead (\Cref {tab:dist_overhead}) via Amdahl's law with per-dimensionality distance fraction $\alpha $ (calibrated from ablation study). Recall@10 is identical for all configurations}{table.2}{}}
+\newlabel{tab:main_results@cref}{{[table][2][]II}{[1][8][]9}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Distance computation latency (nanoseconds per operation) and overhead ratios. Scalar I64F32 overhead is \textbf  {measured wall-clock}; SIMD column is \emph  {projected} assuming $4\times $ speedup from AVX2 vectorization. $N{=}1{,}000$ vector pairs, median of 3 runs.}}{9}{table.3}\protected@file@percent }
+\newlabel{tab:dist_overhead}{{III}{9}{Distance computation latency (nanoseconds per operation) and overhead ratios. Scalar I64F32 overhead is \textbf {measured wall-clock}; SIMD column is \emph {projected} assuming $4\times $ speedup from AVX2 vectorization. $N{=}1{,}000$ vector pairs, median of 3 runs}{table.3}{}}
+\newlabel{tab:dist_overhead@cref}{{[table][3][]III}{[1][8][]9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Detailed recall-throughput comparison on SIFT-1M. The three curves show \textsc  {HNSW}{}, \textsc  {D-HNSW}{} baseline, and \textsc  {D-HNSW}{} optimized. Annotations mark the $\texttt  {ef}$ values at selected points.}}{10}{figure.5}\protected@file@percent }
+\newlabel{fig:sift_detail}{{5}{10}{Detailed recall-throughput comparison on SIFT-1M. The three curves show \hnsw {}, \dhnsw {} baseline, and \dhnsw {} optimized. Annotations mark the $\texttt {ef}$ values at selected points}{figure.5}{}}
+\newlabel{fig:sift_detail@cref}{{[figure][5][]5}{[1][8][]10}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Distance computation error relative to IEEE~754 \texttt  {f64} ground truth, measured over 4{,}950 pairwise comparisons per dimension. The fixed-point (\texttt  {i64}) representation achieves errors below $4 \times 10^{-10}$, approximately $1{,}000\times $ more precise than \texttt  {f32}.}}{10}{table.4}\protected@file@percent }
+\newlabel{tab:error}{{IV}{10}{Distance computation error relative to IEEE~754 \texttt {f64} ground truth, measured over 4{,}950 pairwise comparisons per dimension. The fixed-point (\texttt {i64}) representation achieves errors below $4 \times 10^{-10}$, approximately $1{,}000\times $ more precise than \texttt {f32}}{table.4}{}}
+\newlabel{tab:error@cref}{{[table][4][]IV}{[1][8][]10}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Distance computation error analysis across datasets. Left: relative error distribution for \texttt  {i64} (fixed-point) vs.\ \texttt  {f32} (floating-point). Right: error vs.\ dimension, showing that \texttt  {i64} maintains lower error than \texttt  {f32} at high dimensions.}}{10}{figure.6}\protected@file@percent }
+\newlabel{fig:error}{{6}{10}{Distance computation error analysis across datasets. Left: relative error distribution for \texttt {i64} (fixed-point) vs.\ \texttt {f32} (floating-point). Right: error vs.\ dimension, showing that \texttt {i64} maintains lower error than \texttt {f32} at high dimensions}{figure.6}{}}
+\newlabel{fig:error@cref}{{[figure][6][]6}{[1][10][]10}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Determinism verification via SHA-256 hashing. All three runs produce identical hashes for both index structure and distance values on all datasets tested. Measured on x86-64 (AMD EPYC / Intel Core).}}{10}{table.5}\protected@file@percent }
+\newlabel{tab:determinism}{{V}{10}{Determinism verification via SHA-256 hashing. All three runs produce identical hashes for both index structure and distance values on all datasets tested. Measured on x86-64 (AMD EPYC / Intel Core)}{table.5}{}}
+\newlabel{tab:determinism@cref}{{[table][5][]V}{[1][10][]10}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-E}}Determinism Verification}{10}{subsection.7.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-F}}Cross-Platform Determinism Verification}{10}{subsection.7.6}\protected@file@percent }
+\newlabel{sec:crossplatform_exp}{{\mbox  {VII-F}}{10}{Cross-Platform Determinism Verification}{subsection.7.6}{}}
+\newlabel{sec:crossplatform_exp@cref}{{[subsection][6][7]\mbox  {VII-F}}{[1][10][]10}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Determinism verification heatmap. Each cell represents the hash comparison between two runs. Green indicates identical hashes (PASS). All cells are green, confirming perfect bit-exact reproducibility.}}{11}{figure.7}\protected@file@percent }
+\newlabel{fig:determinism}{{7}{11}{Determinism verification heatmap. Each cell represents the hash comparison between two runs. Green indicates identical hashes (PASS). All cells are green, confirming perfect bit-exact reproducibility}{figure.7}{}}
+\newlabel{fig:determinism@cref}{{[figure][7][]7}{[1][10][]11}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Cross-platform determinism verification on SIFT-128 ($N{=}1{,}000$). All three architectures produce identical SHA-256 hashes for graph structure, result indices, and distance values.}}{11}{table.6}\protected@file@percent }
+\newlabel{tab:crossplatform}{{VI}{11}{Cross-platform determinism verification on SIFT-128 ($N{=}1{,}000$). All three architectures produce identical SHA-256 hashes for graph structure, result indices, and distance values}{table.6}{}}
+\newlabel{tab:crossplatform@cref}{{[table][6][]VI}{[1][11][]11}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-G}}Scalability Analysis}{11}{subsection.7.7}\protected@file@percent }
+\citation{jegou2011pq}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Projected end-to-end search overhead across datasets. The overhead ranges from $1.39\times $ (GIST-960) to $1.75\times $ (SIFT-128), with a mean of $1.56\times $.}}{12}{figure.8}\protected@file@percent }
+\newlabel{fig:overhead}{{8}{12}{Projected end-to-end search overhead across datasets. The overhead ranges from $1.39\times $ (GIST-960) to $1.75\times $ (SIFT-128), with a mean of $1.56\times $}{figure.8}{}}
+\newlabel{fig:overhead@cref}{{[figure][8][]8}{[1][11][]12}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Scalability analysis on SIFT-128. Top: throughput vs.\ dataset size. Bottom: memory usage vs.\ dataset size. The overhead ratio remains stable across two orders of magnitude of dataset size.}}{12}{figure.9}\protected@file@percent }
+\newlabel{fig:scalability}{{9}{12}{Scalability analysis on SIFT-128. Top: throughput vs.\ dataset size. Bottom: memory usage vs.\ dataset size. The overhead ratio remains stable across two orders of magnitude of dataset size}{figure.9}{}}
+\newlabel{fig:scalability@cref}{{[figure][9][]9}{[1][12][]12}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Per-query latency distribution on SIFT-1M at $\texttt  {ef}=128$. \textsc  {D-HNSW}{} exhibits a uniform $1.75\times $ projected overhead (consistent with \Cref  {tab:main_results} and \Cref  {tab:ablation_summary}) across all percentiles, with no additional tail latency.}}{12}{figure.10}\protected@file@percent }
+\newlabel{fig:latency}{{10}{12}{Per-query latency distribution on SIFT-1M at $\texttt {ef}=128$. \dhnsw {} exhibits a uniform $1.75\times $ projected overhead (consistent with \Cref {tab:main_results} and \Cref {tab:ablation_summary}) across all percentiles, with no additional tail latency}{figure.10}{}}
+\newlabel{fig:latency@cref}{{[figure][10][]10}{[1][12][]12}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Real-world \textsc  {D-HNSW}{} performance on SIFT-1M vectors ($D{=}128$, $M{=}16$, $\texttt  {efConstruction}{=}200$, $\texttt  {ef}{=}64$, $k{=}10$, 1{,}000 queries). Two-phase (TP) search applies a secondary refinement pass.}}{12}{table.7}\protected@file@percent }
+\newlabel{tab:real_sift}{{VII}{12}{Real-world \dhnsw {} performance on SIFT-1M vectors ($D{=}128$, $M{=}16$, $\texttt {efConstruction}{=}200$, $\texttt {ef}{=}64$, $k{=}10$, 1{,}000 queries). Two-phase (TP) search applies a secondary refinement pass}{table.7}{}}
+\newlabel{tab:real_sift@cref}{{[table][7][]VII}{[1][12][]12}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-H}}Real-World Validation on SIFT-1M}{12}{subsection.7.8}\protected@file@percent }
+\newlabel{sec:real_validation}{{\mbox  {VII-H}}{12}{Real-World Validation on SIFT-1M}{subsection.7.8}{}}
+\newlabel{sec:real_validation@cref}{{[subsection][8][7]\mbox  {VII-H}}{[1][12][]12}{}{}{}}
+\citation{simhadri2022neurips}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-I}}Validation on LLM Embeddings (1536-d)}{13}{subsection.7.9}\protected@file@percent }
+\newlabel{sec:llm_validation}{{\mbox  {VII-I}}{13}{Validation on LLM Embeddings (1536-d)}{subsection.7.9}{}}
+\newlabel{sec:llm_validation@cref}{{[subsection][9][7]\mbox  {VII-I}}{[1][13][]13}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Empirical \textsc  {D-HNSW}{} results on 1536-dimensional LLM embeddings ($N{=}2{,}000$, $M{=}16$, $\texttt  {efConstruction}{=}200$, $k{=}10$). All values are wall-clock measurements from the Rust implementation.}}{13}{table.8}\protected@file@percent }
+\newlabel{tab:llm_results}{{VIII}{13}{Empirical \dhnsw {} results on 1536-dimensional LLM embeddings ($N{=}2{,}000$, $M{=}16$, $\texttt {efConstruction}{=}200$, $k{=}10$). All values are wall-clock measurements from the Rust implementation}{table.8}{}}
+\newlabel{tab:llm_results@cref}{{[table][8][]VIII}{[1][13][]13}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Discussion}{13}{section.8}\protected@file@percent }
+\newlabel{sec:discussion}{{VIII}{13}{Discussion}{section.8}{}}
+\newlabel{sec:discussion@cref}{{[section][8][]VIII}{[1][13][]13}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}When to Use D-HNSW}{13}{subsection.8.1}\protected@file@percent }
+\citation{lu2024annproof}
+\citation{yao2025nao}
+\citation{alves2026eigenai}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-B}}Fixed-Point vs.\ Floating-Point Accuracy}{14}{subsection.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-C}}Memory Overhead}{14}{subsection.8.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {IX}{\ignorespaces Precision comparison: Q16.16 vs.\ Q32.32 (I64F32) fixed-point formats. Q32.32 provides $65{,}000\times $ better precision at the cost of $2\times $ memory.}}{14}{table.9}\protected@file@percent }
+\newlabel{tab:precision_comparison}{{IX}{14}{Precision comparison: Q16.16 vs.\ Q32.32 (I64F32) fixed-point formats. Q32.32 provides $65{,}000\times $ better precision at the cost of $2\times $ memory}{table.9}{}}
+\newlabel{tab:precision_comparison@cref}{{[table][9][]IX}{[1][14][]14}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {X}{\ignorespaces Qualitative comparison of decentralized vector search methodologies.}}{14}{table.10}\protected@file@percent }
+\newlabel{tab:qualitative}{{X}{14}{Qualitative comparison of decentralized vector search methodologies}{table.10}{}}
+\newlabel{tab:qualitative@cref}{{[table][10][]X}{[1][14][]14}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-D}}Qualitative Comparison}{14}{subsection.8.4}\protected@file@percent }
+\citation{eip1108}
+\citation{lu2024annproof}
+\citation{haas2017wasm}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Qualitative comparison of \textsc  {HNSW}{} vs.\ \textsc  {D-HNSW}{} across key evaluation dimensions. \textsc  {D-HNSW}{} achieves parity on recall and determinism while accepting a controlled throughput overhead.}}{15}{figure.11}\protected@file@percent }
+\newlabel{fig:qualitative}{{11}{15}{Qualitative comparison of \hnsw {} vs.\ \dhnsw {} across key evaluation dimensions. \dhnsw {} achieves parity on recall and determinism while accepting a controlled throughput overhead}{figure.11}{}}
+\newlabel{fig:qualitative@cref}{{[figure][11][]11}{[1][15][]15}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-E}}Quantitative Comparison with ZK-Based Approaches}{15}{subsection.8.5}\protected@file@percent }
+\newlabel{sec:quant_zk}{{\mbox  {VIII-E}}{15}{Quantitative Comparison with ZK-Based Approaches}{subsection.8.5}{}}
+\newlabel{sec:quant_zk@cref}{{[subsection][5][8]\mbox  {VIII-E}}{[1][15][]15}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {XI}{\ignorespaces Quantitative cost comparison for on-chain vector search verification. Gas costs based on Ethereum EIP-1108 pricing. D-HNSW provides instant finality at $5$--$10\times $ lower gas cost than ZK-SNARK verification.}}{15}{table.11}\protected@file@percent }
+\newlabel{tab:quant_comparison}{{XI}{15}{Quantitative cost comparison for on-chain vector search verification. Gas costs based on Ethereum EIP-1108 pricing. D-HNSW provides instant finality at $5$--$10\times $ lower gas cost than ZK-SNARK verification}{table.11}{}}
+\newlabel{tab:quant_comparison@cref}{{[table][11][]XI}{[1][15][]15}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-F}}WebAssembly and Blockchain VM Feasibility}{15}{subsection.8.6}\protected@file@percent }
+\newlabel{sec:wasm_feasibility}{{\mbox  {VIII-F}}{15}{WebAssembly and Blockchain VM Feasibility}{subsection.8.6}{}}
+\newlabel{sec:wasm_feasibility@cref}{{[subsection][6][8]\mbox  {VIII-F}}{[1][15][]15}{}{}{}}
+\citation{simhadri2022neurips}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-G}}Security Analysis}{16}{subsection.8.7}\protected@file@percent }
+\newlabel{sec:security_analysis}{{\mbox  {VIII-G}}{16}{Security Analysis}{subsection.8.7}{}}
+\newlabel{sec:security_analysis@cref}{{[subsection][7][8]\mbox  {VIII-G}}{[1][16][]16}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-H}}Threats to Validity}{16}{subsection.8.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-I}}Limitations}{16}{subsection.8.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Conclusion}{16}{section.9}\protected@file@percent }
+\newlabel{sec:conclusion}{{IX}{16}{Conclusion}{section.9}{}}
+\newlabel{sec:conclusion@cref}{{[section][9][]IX}{[1][16][]16}{}{}{}}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  A: Formal Error Bounds for I64F32 Arithmetic}{17}{section*.1}\protected@file@percent }
+\newlabel{sec:appendix_proofs}{{A}{17}{\appendixname \nobreakspace \thesectiondis \\* Formal Error Bounds for I64F32 Arithmetic}{section*.1}{}}
+\newlabel{sec:appendix_proofs@cref}{{[section][1][]A}{[1][17][]17}{}{}{}}
+\newlabel{thm:sq_dist_error}{{3}{17}{Squared Euclidean Distance Error}{theorem.3}{}}
+\newlabel{thm:sq_dist_error@cref}{{[theorem][3][]3}{[1][17][]17}{}{}{}}
+\newlabel{thm:eucl_dist_error}{{4}{17}{Euclidean Distance Error}{theorem.4}{}}
+\newlabel{thm:eucl_dist_error@cref}{{[theorem][4][]4}{[1][17][]17}{}{}{}}
+\newlabel{thm:ip_error}{{5}{17}{Inner Product Error}{theorem.5}{}}
+\newlabel{thm:ip_error@cref}{{[theorem][5][]5}{[1][17][]17}{}{}{}}
+\newlabel{thm:edge_reversal}{{6}{17}{Edge Reversal Probability}{theorem.6}{}}
+\newlabel{thm:edge_reversal@cref}{{[theorem][6][]6}{[1][17][]17}{}{}{}}
+\newlabel{thm:order_pres}{{7}{17}{Distance Ordering Preservation}{theorem.7}{}}
+\newlabel{thm:order_pres@cref}{{[theorem][7][]7}{[1][17][]17}{}{}{}}
+\newlabel{thm:recall_pres}{{8}{17}{Recall Preservation}{theorem.8}{}}
+\newlabel{thm:recall_pres@cref}{{[theorem][8][]8}{[1][17][]17}{}{}{}}
+\newlabel{thm:overflow}{{9}{17}{Overflow Safety}{theorem.9}{}}
+\newlabel{thm:overflow@cref}{{[theorem][9][]9}{[1][17][]17}{}{}{}}
+\newlabel{thm:crossplatform}{{10}{17}{Bit-Exact Cross-Platform Determinism}{theorem.10}{}}
+\newlabel{thm:crossplatform@cref}{{[theorem][10][]10}{[1][17][]17}{}{}{}}
+\bibstyle{IEEEtran}
+\bibdata{references}
+\bibcite{jegou2011pq}{1}
+\bibcite{simhadri2022neurips}{2}
+\bibcite{bentley1975kdtree}{3}
+\bibcite{gionis1999lsh}{4}
+\bibcite{malkov2014nsw}{5}
+\bibcite{malkov2020hnsw}{6}
+\bibcite{douze2024faiss}{7}
+\bibcite{goldberg1991float}{8}
+\bibcite{buterin2014ethereum}{9}
+\bibcite{lai2022blockchain}{10}
+\bibcite{cardano2024fees}{11}
+\bibcite{decenomy2024integer}{12}
+\bibcite{alves2026eigenai}{13}
+\bibcite{yao2025nao}{14}
+\bibcite{keizer2023ditto}{15}
+\bibcite{lee2024decentface}{16}
+\bibcite{zhang2024nmft}{17}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  B: Verified Component-Level Benchmarks}{18}{section*.2}\protected@file@percent }
+\newlabel{sec:appendix_benchmarks}{{B}{18}{\appendixname \nobreakspace \thesectiondis \\* Verified Component-Level Benchmarks}{section*.2}{}}
+\newlabel{sec:appendix_benchmarks@cref}{{[section][2][]B}{[1][18][]18}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {B-A}}Distance Computation Overhead}{18}{subsection.Appendix.B.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {XII}{\ignorespaces Per-call distance computation latency (ns). V0: f32 baseline; V1: I64F32 scalar; V2: I64F32 SIMD; V3: f32 approximate.}}{18}{table.12}\protected@file@percent }
+\newlabel{tab:bench_distance}{{XII}{18}{Per-call distance computation latency (ns). V0: f32 baseline; V1: I64F32 scalar; V2: I64F32 SIMD; V3: f32 approximate}{table.12}{}}
+\newlabel{tab:bench_distance@cref}{{[table][12][]XII}{[1][18][]18}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {B-B}}Graph Construction Scaling}{18}{subsection.Appendix.B.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {XIII}{\ignorespaces Deterministic graph construction time (D=128, M=16, efConstruction=200).}}{18}{table.13}\protected@file@percent }
+\newlabel{tab:bench_build}{{XIII}{18}{Deterministic graph construction time (D=128, M=16, efConstruction=200)}{table.13}{}}
+\newlabel{tab:bench_build@cref}{{[table][13][]XIII}{[1][18][]18}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {B-C}}Determinism Verification}{18}{subsection.Appendix.B.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{18}{section*.4}\protected@file@percent }
+\bibcite{lu2024annproof}{18}
+\bibcite{gudur2025valori}{19}
+\bibcite{bertoni2013keccak}{20}
+\bibcite{baranchuk2018revisiting}{21}
+\bibcite{subramanya2019diskann}{22}
+\bibcite{karthik2024bang}{23}
+\bibcite{xu2025harmony}{24}
+\bibcite{teofili2025patience}{25}
+\bibcite{olivieri2022golisa}{26}
+\bibcite{schoenmakers2023fixedpoint}{27}
+\bibcite{jegou2011sift}{28}
+\bibcite{pennington2014glove}{29}
+\bibcite{xiao2017fashion}{30}
+\bibcite{oliva2001gist}{31}
+\bibcite{babenko2016deep1b}{32}
+\bibcite{eip1108}{33}
+\bibcite{haas2017wasm}{34}
+\@writefile{toc}{\contentsline {section}{Biographies}{19}{IEEEbiography.0}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Hong-Son Nguyen}{19}{IEEEbiography.1}\protected@file@percent }
+\gdef \@abspage@last{19}

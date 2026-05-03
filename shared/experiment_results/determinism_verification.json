@@ -1,0 +1,143 @@
+{
+  "sift-1m": {
+    "dataset": "sift-1m",
+    "n_vectors": 50000,
+    "dims": 128,
+    "n_queries": 200,
+    "frac_bits": 19,
+    "n_runs": 5,
+    "distance_test": {
+      "n_pairs": 1000,
+      "hashes": [
+        "ab3b035b5298efee891611edee41a3d332c9a54cf24adbb1356c38973097311c",
+        "ab3b035b5298efee891611edee41a3d332c9a54cf24adbb1356c38973097311c",
+        "ab3b035b5298efee891611edee41a3d332c9a54cf24adbb1356c38973097311c",
+        "ab3b035b5298efee891611edee41a3d332c9a54cf24adbb1356c38973097311c",
+        "ab3b035b5298efee891611edee41a3d332c9a54cf24adbb1356c38973097311c"
+      ],
+      "all_identical": true
+    },
+    "search_test": {
+      "hashes": [
+        "a820c0f4a84922bd5449ceea2d38a5b815e23c2ec872b82cd82a792f10bf604c",
+        "a820c0f4a84922bd5449ceea2d38a5b815e23c2ec872b82cd82a792f10bf604c",
+        "a820c0f4a84922bd5449ceea2d38a5b815e23c2ec872b82cd82a792f10bf604c",
+        "a820c0f4a84922bd5449ceea2d38a5b815e23c2ec872b82cd82a792f10bf604c",
+        "a820c0f4a84922bd5449ceea2d38a5b815e23c2ec872b82cd82a792f10bf604c"
+      ],
+      "all_identical": true,
+      "avg_time_s": 12.51,
+      "std_time_s": 0.642
+    },
+    "order_independence": {
+      "hash_forward": "a820c0f4a84922bd5449ceea2d38a5b815e23c2ec872b82cd82a792f10bf604c",
+      "hash_reverse": "a820c0f4a84922bd5449ceea2d38a5b815e23c2ec872b82cd82a792f10bf604c",
+      "identical": true
+    },
+    "float32_control": {
+      "hashes": [
+        "40fcb8b046b05be87a00e7ed35e49985253f815af900dd85f34bbb1d79d452cb",
+        "40fcb8b046b05be87a00e7ed35e49985253f815af900dd85f34bbb1d79d452cb",
+        "40fcb8b046b05be87a00e7ed35e49985253f815af900dd85f34bbb1d79d452cb",
+        "40fcb8b046b05be87a00e7ed35e49985253f815af900dd85f34bbb1d79d452cb",
+        "40fcb8b046b05be87a00e7ed35e49985253f815af900dd85f34bbb1d79d452cb"
+      ],
+      "all_identical": true
+    },
+    "overall_pass": true
+  },
+  "fashion-mnist": {
+    "dataset": "fashion-mnist",
+    "n_vectors": 50000,
+    "dims": 784,
+    "n_queries": 200,
+    "frac_bits": 18,
+    "n_runs": 5,
+    "distance_test": {
+      "n_pairs": 1000,
+      "hashes": [
+        "10da6b7e39599f28385471f61a159165fb36d2145ee04978e9a533c566c68f96",
+        "10da6b7e39599f28385471f61a159165fb36d2145ee04978e9a533c566c68f96",
+        "10da6b7e39599f28385471f61a159165fb36d2145ee04978e9a533c566c68f96",
+        "10da6b7e39599f28385471f61a159165fb36d2145ee04978e9a533c566c68f96",
+        "10da6b7e39599f28385471f61a159165fb36d2145ee04978e9a533c566c68f96"
+      ],
+      "all_identical": true
+    },
+    "search_test": {
+      "hashes": [
+        "5f187b1d84524ca94b3c6dae9143bd7a7bd9eaae781115debfdbefda6545c245",
+        "5f187b1d84524ca94b3c6dae9143bd7a7bd9eaae781115debfdbefda6545c245",
+        "5f187b1d84524ca94b3c6dae9143bd7a7bd9eaae781115debfdbefda6545c245",
+        "5f187b1d84524ca94b3c6dae9143bd7a7bd9eaae781115debfdbefda6545c245",
+        "5f187b1d84524ca94b3c6dae9143bd7a7bd9eaae781115debfdbefda6545c245"
+      ],
+      "all_identical": true,
+      "avg_time_s": 61.19,
+      "std_time_s": 2.574
+    },
+    "order_independence": {
+      "hash_forward": "5f187b1d84524ca94b3c6dae9143bd7a7bd9eaae781115debfdbefda6545c245",
+      "hash_reverse": "5f187b1d84524ca94b3c6dae9143bd7a7bd9eaae781115debfdbefda6545c245",
+      "identical": true
+    },
+    "float32_control": {
+      "hashes": [
+        "37151f5bf73568c9cd0df206a4f2ba56b91ef41a09073f5e6d41029898743b77",
+        "37151f5bf73568c9cd0df206a4f2ba56b91ef41a09073f5e6d41029898743b77",
+        "37151f5bf73568c9cd0df206a4f2ba56b91ef41a09073f5e6d41029898743b77",
+        "37151f5bf73568c9cd0df206a4f2ba56b91ef41a09073f5e6d41029898743b77",
+        "37151f5bf73568c9cd0df206a4f2ba56b91ef41a09073f5e6d41029898743b77"
+      ],
+      "all_identical": true
+    },
+    "overall_pass": true
+  },
+  "gist-960": {
+    "dataset": "gist-960",
+    "n_vectors": 50000,
+    "dims": 960,
+    "n_queries": 200,
+    "frac_bits": 25,
+    "n_runs": 5,
+    "distance_test": {
+      "n_pairs": 1000,
+      "hashes": [
+        "bd6ec6656fd8c0f931ba6f7253614b783f2e95f6941a8887f69b2e4a666fe23c",
+        "bd6ec6656fd8c0f931ba6f7253614b783f2e95f6941a8887f69b2e4a666fe23c",
+        "bd6ec6656fd8c0f931ba6f7253614b783f2e95f6941a8887f69b2e4a666fe23c",
+        "bd6ec6656fd8c0f931ba6f7253614b783f2e95f6941a8887f69b2e4a666fe23c",
+        "bd6ec6656fd8c0f931ba6f7253614b783f2e95f6941a8887f69b2e4a666fe23c"
+      ],
+      "all_identical": true
+    },
+    "search_test": {
+      "hashes": [
+        "73d0daa75cd7a40e0e159347cbae5109fd5007db1962383a619a309c20ba4484",
+        "73d0daa75cd7a40e0e159347cbae5109fd5007db1962383a619a309c20ba4484",
+        "73d0daa75cd7a40e0e159347cbae5109fd5007db1962383a619a309c20ba4484",
+        "73d0daa75cd7a40e0e159347cbae5109fd5007db1962383a619a309c20ba4484",
+        "73d0daa75cd7a40e0e159347cbae5109fd5007db1962383a619a309c20ba4484"
+      ],
+      "all_identical": true,
+      "avg_time_s": 70.84,
+      "std_time_s": 1.009
+    },
+    "order_independence": {
+      "hash_forward": "73d0daa75cd7a40e0e159347cbae5109fd5007db1962383a619a309c20ba4484",
+      "hash_reverse": "73d0daa75cd7a40e0e159347cbae5109fd5007db1962383a619a309c20ba4484",
+      "identical": true
+    },
+    "float32_control": {
+      "hashes": [
+        "f98f961fb7604e4d11f885babe3d59ff2debb0f4c1d82e6474ad2d844d29bb4b",
+        "f98f961fb7604e4d11f885babe3d59ff2debb0f4c1d82e6474ad2d844d29bb4b",
+        "f98f961fb7604e4d11f885babe3d59ff2debb0f4c1d82e6474ad2d844d29bb4b",
+        "f98f961fb7604e4d11f885babe3d59ff2debb0f4c1d82e6474ad2d844d29bb4b",
+        "f98f961fb7604e4d11f885babe3d59ff2debb0f4c1d82e6474ad2d844d29bb4b"
+      ],
+      "all_identical": true
+    },
+    "overall_pass": true
+  }
+}

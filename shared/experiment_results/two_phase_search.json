@@ -1,0 +1,533 @@
+{
+  "sift-1m": {
+    "dataset": "sift-1m",
+    "n_vectors": 100000,
+    "dims": 128,
+    "frac_bits_i32": 4,
+    "frac_bits_i64": 19,
+    "methods": {
+      "float32": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.1637,
+          "qps": 100626.3,
+          "latency_us": 9.9
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1639,
+          "qps": 76258.7,
+          "latency_us": 13.1
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1639,
+          "qps": 58611.6,
+          "latency_us": 17.1
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1639,
+          "qps": 46131.3,
+          "latency_us": 21.7
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.1639,
+          "qps": 34156.1,
+          "latency_us": 29.3
+        }
+      ],
+      "i64f32_only": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.1637,
+          "qps": 15382.1,
+          "latency_us": 65.0
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1639,
+          "qps": 8973.7,
+          "latency_us": 111.4
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1639,
+          "qps": 6847.6,
+          "latency_us": 146.0
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1639,
+          "qps": 5702.9,
+          "latency_us": 175.4
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.1639,
+          "qps": 3654.7,
+          "latency_us": 273.6
+        }
+      ],
+      "two_phase_x2": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.1637,
+          "qps": 11001.1,
+          "latency_us": 90.9
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1639,
+          "qps": 8017.3,
+          "latency_us": 124.7
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1639,
+          "qps": 7053.6,
+          "latency_us": 141.8
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1639,
+          "qps": 5457.2,
+          "latency_us": 183.2
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.1639,
+          "qps": 4802.5,
+          "latency_us": 208.2
+        }
+      ],
+      "two_phase_x3": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.1637,
+          "qps": 10906.2,
+          "latency_us": 91.7
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1639,
+          "qps": 7793.5,
+          "latency_us": 128.3
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1639,
+          "qps": 6982.6,
+          "latency_us": 143.2
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1639,
+          "qps": 5685.2,
+          "latency_us": 175.9
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.1639,
+          "qps": 4461.6,
+          "latency_us": 224.1
+        }
+      ],
+      "two_phase_x5": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.1637,
+          "qps": 9531.8,
+          "latency_us": 104.9
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1639,
+          "qps": 8323.1,
+          "latency_us": 120.1
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1639,
+          "qps": 6949.8,
+          "latency_us": 143.9
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1639,
+          "qps": 5603.2,
+          "latency_us": 178.5
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.1639,
+          "qps": 4058.0,
+          "latency_us": 246.4
+        }
+      ]
+    },
+    "summary_ef128": {
+      "float32_qps": 76258.7,
+      "i64f32_qps": 8973.7,
+      "two_phase_qps": 7793.5,
+      "i64f32_overhead": 8.498,
+      "two_phase_overhead": 9.785,
+      "two_phase_speedup_vs_i64": 0.868
+    }
+  },
+  "fashion-mnist": {
+    "dataset": "fashion-mnist",
+    "n_vectors": 60000,
+    "dims": 784,
+    "frac_bits_i32": 4,
+    "frac_bits_i64": 18,
+    "methods": {
+      "float32": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.9976,
+          "qps": 24038.1,
+          "latency_us": 41.6
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.9986,
+          "qps": 14965.3,
+          "latency_us": 66.8
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.9989,
+          "qps": 11381.7,
+          "latency_us": 87.9
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.9992,
+          "qps": 8852.8,
+          "latency_us": 113.0
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.9997,
+          "qps": 6728.7,
+          "latency_us": 148.6
+        }
+      ],
+      "i64f32_only": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.9976,
+          "qps": 5288.0,
+          "latency_us": 189.1
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.9986,
+          "qps": 3021.2,
+          "latency_us": 331.0
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.9989,
+          "qps": 1931.5,
+          "latency_us": 517.7
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.9992,
+          "qps": 1499.9,
+          "latency_us": 666.7
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.9997,
+          "qps": 105.9,
+          "latency_us": 9438.8
+        }
+      ],
+      "two_phase_x2": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.9976,
+          "qps": 5345.4,
+          "latency_us": 187.1
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.9986,
+          "qps": 3663.0,
+          "latency_us": 273.0
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.9989,
+          "qps": 2465.1,
+          "latency_us": 405.7
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.9992,
+          "qps": 1989.6,
+          "latency_us": 502.6
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.9997,
+          "qps": 1296.7,
+          "latency_us": 771.2
+        }
+      ],
+      "two_phase_x3": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.9976,
+          "qps": 4596.4,
+          "latency_us": 217.6
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.9986,
+          "qps": 3267.4,
+          "latency_us": 306.1
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.9989,
+          "qps": 2537.4,
+          "latency_us": 394.1
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.9992,
+          "qps": 1942.2,
+          "latency_us": 514.9
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.9997,
+          "qps": 1289.2,
+          "latency_us": 775.7
+        }
+      ],
+      "two_phase_x5": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.9976,
+          "qps": 3691.5,
+          "latency_us": 270.9
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.9986,
+          "qps": 2928.3,
+          "latency_us": 341.5
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.9989,
+          "qps": 2308.2,
+          "latency_us": 433.2
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.9992,
+          "qps": 1791.4,
+          "latency_us": 558.2
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.9997,
+          "qps": 1239.9,
+          "latency_us": 806.5
+        }
+      ]
+    },
+    "summary_ef128": {
+      "float32_qps": 14965.3,
+      "i64f32_qps": 3021.2,
+      "two_phase_qps": 3267.4,
+      "i64f32_overhead": 4.953,
+      "two_phase_overhead": 4.58,
+      "two_phase_speedup_vs_i64": 1.081
+    }
+  },
+  "gist-960": {
+    "dataset": "gist-960",
+    "n_vectors": 100000,
+    "dims": 960,
+    "frac_bits_i32": 9,
+    "frac_bits_i64": 25,
+    "methods": {
+      "float32": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.0976,
+          "qps": 11998.6,
+          "latency_us": 83.3
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1009,
+          "qps": 7141.9,
+          "latency_us": 140.0
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1023,
+          "qps": 5012.1,
+          "latency_us": 199.5
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1025,
+          "qps": 3419.8,
+          "latency_us": 292.4
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.103,
+          "qps": 2247.5,
+          "latency_us": 444.9
+        }
+      ],
+      "i64f32_only": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.0976,
+          "qps": 3706.8,
+          "latency_us": 269.8
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1009,
+          "qps": 2025.2,
+          "latency_us": 493.8
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1023,
+          "qps": 1287.7,
+          "latency_us": 776.6
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1025,
+          "qps": 941.3,
+          "latency_us": 1062.4
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.103,
+          "qps": 107.2,
+          "latency_us": 9326.1
+        }
+      ],
+      "two_phase_x2": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.0976,
+          "qps": 3437.0,
+          "latency_us": 291.0
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1009,
+          "qps": 2245.6,
+          "latency_us": 445.3
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1023,
+          "qps": 1614.3,
+          "latency_us": 619.5
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1025,
+          "qps": 1153.9,
+          "latency_us": 866.6
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.103,
+          "qps": 127.7,
+          "latency_us": 7829.3
+        }
+      ],
+      "two_phase_x3": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.0976,
+          "qps": 3541.2,
+          "latency_us": 282.4
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1009,
+          "qps": 2187.8,
+          "latency_us": 457.1
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1023,
+          "qps": 1644.1,
+          "latency_us": 608.2
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1025,
+          "qps": 1199.0,
+          "latency_us": 834.0
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.103,
+          "qps": 118.5,
+          "latency_us": 8440.4
+        }
+      ],
+      "two_phase_x5": [
+        {
+          "ef": 64,
+          "recall_at_10": 0.0976,
+          "qps": 3108.8,
+          "latency_us": 321.7
+        },
+        {
+          "ef": 128,
+          "recall_at_10": 0.1009,
+          "qps": 1817.6,
+          "latency_us": 550.2
+        },
+        {
+          "ef": 200,
+          "recall_at_10": 0.1023,
+          "qps": 1471.5,
+          "latency_us": 679.6
+        },
+        {
+          "ef": 300,
+          "recall_at_10": 0.1025,
+          "qps": 1108.0,
+          "latency_us": 902.5
+        },
+        {
+          "ef": 500,
+          "recall_at_10": 0.103,
+          "qps": 127.6,
+          "latency_us": 7834.1
+        }
+      ]
+    },
+    "summary_ef128": {
+      "float32_qps": 7141.9,
+      "i64f32_qps": 2025.2,
+      "two_phase_qps": 2187.8,
+      "i64f32_overhead": 3.527,
+      "two_phase_overhead": 3.264,
+      "two_phase_speedup_vs_i64": 1.08
+    }
+  }
+}

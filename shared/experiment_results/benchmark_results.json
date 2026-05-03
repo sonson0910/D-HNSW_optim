@@ -1,0 +1,456 @@
+{
+  "sift-1m": {
+    "dataset": "sift-1m",
+    "n_vectors": 1000000,
+    "dims": 128,
+    "n_queries": 10000,
+    "metric": "l2",
+    "space": "l2",
+    "M": 16,
+    "ef_construction": 200,
+    "build_time_s": 35.52,
+    "results": [
+      {
+        "ef": 10,
+        "recall_at_1": 0.7825,
+        "recall_at_10": 0.7094,
+        "qps": 157104.7,
+        "latency_us": 6.4
+      },
+      {
+        "ef": 20,
+        "recall_at_1": 0.889,
+        "recall_at_10": 0.8381,
+        "qps": 112218.6,
+        "latency_us": 8.9
+      },
+      {
+        "ef": 40,
+        "recall_at_1": 0.9503,
+        "recall_at_10": 0.9267,
+        "qps": 74468.5,
+        "latency_us": 13.4
+      },
+      {
+        "ef": 64,
+        "recall_at_1": 0.9711,
+        "recall_at_10": 0.9635,
+        "qps": 51694.3,
+        "latency_us": 19.3
+      },
+      {
+        "ef": 100,
+        "recall_at_1": 0.9848,
+        "recall_at_10": 0.9829,
+        "qps": 35201.6,
+        "latency_us": 28.4
+      },
+      {
+        "ef": 128,
+        "recall_at_1": 0.9888,
+        "recall_at_10": 0.9895,
+        "qps": 27739.0,
+        "latency_us": 36.1
+      },
+      {
+        "ef": 200,
+        "recall_at_1": 0.9914,
+        "recall_at_10": 0.9955,
+        "qps": 18504.3,
+        "latency_us": 54.0
+      },
+      {
+        "ef": 300,
+        "recall_at_1": 0.9925,
+        "recall_at_10": 0.9981,
+        "qps": 12656.4,
+        "latency_us": 79.0
+      },
+      {
+        "ef": 500,
+        "recall_at_1": 0.9925,
+        "recall_at_10": 0.999,
+        "qps": 8246.2,
+        "latency_us": 121.3
+      }
+    ]
+  },
+  "glove-100": {
+    "dataset": "glove-100",
+    "n_vectors": 1183514,
+    "dims": 100,
+    "n_queries": 10000,
+    "metric": "angular",
+    "space": "cosine",
+    "M": 16,
+    "ef_construction": 200,
+    "build_time_s": 51.25,
+    "results": [
+      {
+        "ef": 10,
+        "recall_at_1": 0.5278,
+        "recall_at_10": 0.4699,
+        "qps": 156953.7,
+        "latency_us": 6.4
+      },
+      {
+        "ef": 20,
+        "recall_at_1": 0.6503,
+        "recall_at_10": 0.5958,
+        "qps": 107962.0,
+        "latency_us": 9.3
+      },
+      {
+        "ef": 40,
+        "recall_at_1": 0.7514,
+        "recall_at_10": 0.7015,
+        "qps": 66992.0,
+        "latency_us": 14.9
+      },
+      {
+        "ef": 64,
+        "recall_at_1": 0.8043,
+        "recall_at_10": 0.7614,
+        "qps": 47575.4,
+        "latency_us": 21.0
+      },
+      {
+        "ef": 100,
+        "recall_at_1": 0.8449,
+        "recall_at_10": 0.8089,
+        "qps": 32185.2,
+        "latency_us": 31.1
+      },
+      {
+        "ef": 128,
+        "recall_at_1": 0.8657,
+        "recall_at_10": 0.8317,
+        "qps": 26377.2,
+        "latency_us": 37.9
+      },
+      {
+        "ef": 200,
+        "recall_at_1": 0.8948,
+        "recall_at_10": 0.8671,
+        "qps": 19148.9,
+        "latency_us": 52.2
+      },
+      {
+        "ef": 300,
+        "recall_at_1": 0.9183,
+        "recall_at_10": 0.8953,
+        "qps": 12622.2,
+        "latency_us": 79.2
+      },
+      {
+        "ef": 500,
+        "recall_at_1": 0.9415,
+        "recall_at_10": 0.9244,
+        "qps": 8076.3,
+        "latency_us": 123.8
+      }
+    ]
+  },
+  "fashion-mnist": {
+    "dataset": "fashion-mnist",
+    "n_vectors": 60000,
+    "dims": 784,
+    "n_queries": 10000,
+    "metric": "l2",
+    "space": "l2",
+    "M": 16,
+    "ef_construction": 200,
+    "build_time_s": 1.81,
+    "results": [
+      {
+        "ef": 10,
+        "recall_at_1": 0.9626,
+        "recall_at_10": 0.9333,
+        "qps": 154019.5,
+        "latency_us": 6.5
+      },
+      {
+        "ef": 20,
+        "recall_at_1": 0.9853,
+        "recall_at_10": 0.9797,
+        "qps": 113057.7,
+        "latency_us": 8.8
+      },
+      {
+        "ef": 40,
+        "recall_at_1": 0.9949,
+        "recall_at_10": 0.9948,
+        "qps": 71516.0,
+        "latency_us": 14.0
+      },
+      {
+        "ef": 64,
+        "recall_at_1": 0.9977,
+        "recall_at_10": 0.9978,
+        "qps": 48907.7,
+        "latency_us": 20.4
+      },
+      {
+        "ef": 100,
+        "recall_at_1": 0.9985,
+        "recall_at_10": 0.9988,
+        "qps": 37579.6,
+        "latency_us": 26.6
+      },
+      {
+        "ef": 128,
+        "recall_at_1": 0.9987,
+        "recall_at_10": 0.999,
+        "qps": 32098.1,
+        "latency_us": 31.2
+      },
+      {
+        "ef": 200,
+        "recall_at_1": 0.9993,
+        "recall_at_10": 0.9994,
+        "qps": 23795.1,
+        "latency_us": 42.0
+      },
+      {
+        "ef": 300,
+        "recall_at_1": 0.9995,
+        "recall_at_10": 0.9996,
+        "qps": 18053.4,
+        "latency_us": 55.4
+      },
+      {
+        "ef": 500,
+        "recall_at_1": 0.9997,
+        "recall_at_10": 0.9999,
+        "qps": 12527.5,
+        "latency_us": 79.8
+      }
+    ]
+  },
+  "gist-960": {
+    "dataset": "gist-960",
+    "n_vectors": 1000000,
+    "dims": 960,
+    "n_queries": 1000,
+    "metric": "l2",
+    "space": "l2",
+    "M": 16,
+    "ef_construction": 200,
+    "build_time_s": 317.24,
+    "results": [
+      {
+        "ef": 10,
+        "recall_at_1": 0.46,
+        "recall_at_10": 0.4044,
+        "qps": 27486.9,
+        "latency_us": 36.4
+      },
+      {
+        "ef": 20,
+        "recall_at_1": 0.591,
+        "recall_at_10": 0.5325,
+        "qps": 17660.2,
+        "latency_us": 56.6
+      },
+      {
+        "ef": 40,
+        "recall_at_1": 0.725,
+        "recall_at_10": 0.6708,
+        "qps": 10643.1,
+        "latency_us": 94.0
+      },
+      {
+        "ef": 64,
+        "recall_at_1": 0.801,
+        "recall_at_10": 0.7555,
+        "qps": 7357.6,
+        "latency_us": 135.9
+      },
+      {
+        "ef": 100,
+        "recall_at_1": 0.868,
+        "recall_at_10": 0.8255,
+        "qps": 5116.5,
+        "latency_us": 195.4
+      },
+      {
+        "ef": 128,
+        "recall_at_1": 0.896,
+        "recall_at_10": 0.8585,
+        "qps": 4261.1,
+        "latency_us": 234.7
+      },
+      {
+        "ef": 200,
+        "recall_at_1": 0.927,
+        "recall_at_10": 0.9046,
+        "qps": 2967.5,
+        "latency_us": 337.0
+      },
+      {
+        "ef": 300,
+        "recall_at_1": 0.952,
+        "recall_at_10": 0.9376,
+        "qps": 2147.0,
+        "latency_us": 465.8
+      },
+      {
+        "ef": 500,
+        "recall_at_1": 0.963,
+        "recall_at_10": 0.9634,
+        "qps": 1392.6,
+        "latency_us": 718.1
+      }
+    ]
+  },
+  "deep-96-1M": {
+    "dataset": "deep-96-1M",
+    "n_vectors": 1000000,
+    "dims": 96,
+    "n_queries": 1000,
+    "space": "cosine",
+    "M": 16,
+    "ef_construction": 200,
+    "build_time_s": 53.11,
+    "results": [
+      {
+        "ef": 10,
+        "recall_at_1": 0.784,
+        "recall_at_10": 0.7054,
+        "qps": 120218.5,
+        "latency_us": 8.3
+      },
+      {
+        "ef": 20,
+        "recall_at_1": 0.883,
+        "recall_at_10": 0.8295,
+        "qps": 68353.4,
+        "latency_us": 14.6
+      },
+      {
+        "ef": 40,
+        "recall_at_1": 0.95,
+        "recall_at_10": 0.9145,
+        "qps": 52064.3,
+        "latency_us": 19.2
+      },
+      {
+        "ef": 64,
+        "recall_at_1": 0.969,
+        "recall_at_10": 0.9521,
+        "qps": 35431.1,
+        "latency_us": 28.2
+      },
+      {
+        "ef": 100,
+        "recall_at_1": 0.983,
+        "recall_at_10": 0.973,
+        "qps": 25866.5,
+        "latency_us": 38.7
+      },
+      {
+        "ef": 128,
+        "recall_at_1": 0.986,
+        "recall_at_10": 0.981,
+        "qps": 22350.2,
+        "latency_us": 44.7
+      },
+      {
+        "ef": 200,
+        "recall_at_1": 0.993,
+        "recall_at_10": 0.9902,
+        "qps": 15791.2,
+        "latency_us": 63.3
+      },
+      {
+        "ef": 300,
+        "recall_at_1": 0.998,
+        "recall_at_10": 0.9951,
+        "qps": 11276.4,
+        "latency_us": 88.7
+      },
+      {
+        "ef": 500,
+        "recall_at_1": 0.999,
+        "recall_at_10": 0.9974,
+        "qps": 7242.5,
+        "latency_us": 138.1
+      }
+    ]
+  },
+  "random-128": {
+    "dataset": "random-128",
+    "n_vectors": 200000,
+    "dims": 128,
+    "n_queries": 1000,
+    "space": "l2",
+    "M": 16,
+    "ef_construction": 200,
+    "build_time_s": 6.95,
+    "results": [
+      {
+        "ef": 10,
+        "recall_at_1": 0.191,
+        "recall_at_10": 0.1334,
+        "qps": 182917.7,
+        "latency_us": 5.5
+      },
+      {
+        "ef": 20,
+        "recall_at_1": 0.303,
+        "recall_at_10": 0.2093,
+        "qps": 141341.3,
+        "latency_us": 7.1
+      },
+      {
+        "ef": 40,
+        "recall_at_1": 0.432,
+        "recall_at_10": 0.3136,
+        "qps": 107033.0,
+        "latency_us": 9.3
+      },
+      {
+        "ef": 64,
+        "recall_at_1": 0.505,
+        "recall_at_10": 0.3961,
+        "qps": 83497.0,
+        "latency_us": 12.0
+      },
+      {
+        "ef": 100,
+        "recall_at_1": 0.596,
+        "recall_at_10": 0.4831,
+        "qps": 62913.3,
+        "latency_us": 15.9
+      },
+      {
+        "ef": 128,
+        "recall_at_1": 0.64,
+        "recall_at_10": 0.5357,
+        "qps": 50233.6,
+        "latency_us": 19.9
+      },
+      {
+        "ef": 200,
+        "recall_at_1": 0.743,
+        "recall_at_10": 0.63,
+        "qps": 37135.2,
+        "latency_us": 26.9
+      },
+      {
+        "ef": 300,
+        "recall_at_1": 0.805,
+        "recall_at_10": 0.7099,
+        "qps": 27702.4,
+        "latency_us": 36.1
+      },
+      {
+        "ef": 500,
+        "recall_at_1": 0.868,
+        "recall_at_10": 0.7995,
+        "qps": 18198.4,
+        "latency_us": 54.9
+      }
+    ]
+  }
+}

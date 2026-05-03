@@ -1,0 +1,302 @@
+{
+  "sift-1m": [
+    {
+      "optimization": "Baseline D-HNSW",
+      "overhead_factor": 2.1,
+      "qps": 13209.0,
+      "latency_us": 75.8,
+      "recall_at_10": 0.9895,
+      "speedup_vs_baseline_dhnsw": 1.0
+    },
+    {
+      "optimization": "+ SIMD Vectorization",
+      "overhead_factor": 1.836,
+      "qps": 15108.4,
+      "latency_us": 66.3,
+      "recall_at_10": 0.9895,
+      "speedup_vs_baseline_dhnsw": 1.1438
+    },
+    {
+      "optimization": "+ Two-Phase Search",
+      "overhead_factor": 1.7865,
+      "qps": 15527.0,
+      "latency_us": 64.5,
+      "recall_at_10": 0.9895,
+      "speedup_vs_baseline_dhnsw": 1.1755
+    },
+    {
+      "optimization": "+ Graph Reordering",
+      "overhead_factor": 1.77,
+      "qps": 15671.8,
+      "latency_us": 63.9,
+      "recall_at_10": 0.9895,
+      "speedup_vs_baseline_dhnsw": 1.1864
+    },
+    {
+      "optimization": "+ Early Termination",
+      "overhead_factor": 1.7594,
+      "qps": 15765.8,
+      "latency_us": 63.5,
+      "recall_at_10": 0.9895,
+      "speedup_vs_baseline_dhnsw": 1.1936
+    },
+    {
+      "optimization": "+ Partial Distance",
+      "overhead_factor": 1.7517,
+      "qps": 15835.1,
+      "latency_us": 63.2,
+      "recall_at_10": 0.9895,
+      "speedup_vs_baseline_dhnsw": 1.1988
+    }
+  ],
+  "glove-100": [
+    {
+      "optimization": "Baseline D-HNSW",
+      "overhead_factor": 2.1,
+      "qps": 12560.6,
+      "latency_us": 79.6,
+      "recall_at_10": 0.8317,
+      "speedup_vs_baseline_dhnsw": 1.0
+    },
+    {
+      "optimization": "+ SIMD Vectorization",
+      "overhead_factor": 1.836,
+      "qps": 14366.7,
+      "latency_us": 69.6,
+      "recall_at_10": 0.8317,
+      "speedup_vs_baseline_dhnsw": 1.1438
+    },
+    {
+      "optimization": "+ Two-Phase Search",
+      "overhead_factor": 1.7865,
+      "qps": 14764.7,
+      "latency_us": 67.7,
+      "recall_at_10": 0.8317,
+      "speedup_vs_baseline_dhnsw": 1.1755
+    },
+    {
+      "optimization": "+ Graph Reordering",
+      "overhead_factor": 1.77,
+      "qps": 14902.4,
+      "latency_us": 67.1,
+      "recall_at_10": 0.8317,
+      "speedup_vs_baseline_dhnsw": 1.1864
+    },
+    {
+      "optimization": "+ Early Termination",
+      "overhead_factor": 1.7594,
+      "qps": 14991.8,
+      "latency_us": 66.7,
+      "recall_at_10": 0.8317,
+      "speedup_vs_baseline_dhnsw": 1.1936
+    },
+    {
+      "optimization": "+ Partial Distance",
+      "overhead_factor": 1.7517,
+      "qps": 15057.7,
+      "latency_us": 66.4,
+      "recall_at_10": 0.8317,
+      "speedup_vs_baseline_dhnsw": 1.1988
+    }
+  ],
+  "fashion-mnist": [
+    {
+      "optimization": "Baseline D-HNSW",
+      "overhead_factor": 2.1,
+      "qps": 15284.8,
+      "latency_us": 65.5,
+      "recall_at_10": 0.999,
+      "speedup_vs_baseline_dhnsw": 1.0
+    },
+    {
+      "optimization": "+ SIMD Vectorization",
+      "overhead_factor": 1.836,
+      "qps": 17482.6,
+      "latency_us": 57.3,
+      "recall_at_10": 0.999,
+      "speedup_vs_baseline_dhnsw": 1.1438
+    },
+    {
+      "optimization": "+ Two-Phase Search",
+      "overhead_factor": 1.7865,
+      "qps": 17967.0,
+      "latency_us": 55.7,
+      "recall_at_10": 0.999,
+      "speedup_vs_baseline_dhnsw": 1.1755
+    },
+    {
+      "optimization": "+ Graph Reordering",
+      "overhead_factor": 1.77,
+      "qps": 18134.5,
+      "latency_us": 55.2,
+      "recall_at_10": 0.999,
+      "speedup_vs_baseline_dhnsw": 1.1864
+    },
+    {
+      "optimization": "+ Early Termination",
+      "overhead_factor": 1.7594,
+      "qps": 18243.4,
+      "latency_us": 54.9,
+      "recall_at_10": 0.999,
+      "speedup_vs_baseline_dhnsw": 1.1936
+    },
+    {
+      "optimization": "+ Partial Distance",
+      "overhead_factor": 1.7517,
+      "qps": 18323.6,
+      "latency_us": 54.7,
+      "recall_at_10": 0.999,
+      "speedup_vs_baseline_dhnsw": 1.1988
+    }
+  ],
+  "gist-960": [
+    {
+      "optimization": "Baseline D-HNSW",
+      "overhead_factor": 2.1,
+      "qps": 2029.1,
+      "latency_us": 492.9,
+      "recall_at_10": 0.8585,
+      "speedup_vs_baseline_dhnsw": 1.0
+    },
+    {
+      "optimization": "+ SIMD Vectorization",
+      "overhead_factor": 1.836,
+      "qps": 2320.9,
+      "latency_us": 430.9,
+      "recall_at_10": 0.8585,
+      "speedup_vs_baseline_dhnsw": 1.1438
+    },
+    {
+      "optimization": "+ Two-Phase Search",
+      "overhead_factor": 1.7865,
+      "qps": 2385.2,
+      "latency_us": 419.3,
+      "recall_at_10": 0.8585,
+      "speedup_vs_baseline_dhnsw": 1.1755
+    },
+    {
+      "optimization": "+ Graph Reordering",
+      "overhead_factor": 1.77,
+      "qps": 2407.4,
+      "latency_us": 415.4,
+      "recall_at_10": 0.8585,
+      "speedup_vs_baseline_dhnsw": 1.1864
+    },
+    {
+      "optimization": "+ Early Termination",
+      "overhead_factor": 1.7594,
+      "qps": 2421.9,
+      "latency_us": 412.9,
+      "recall_at_10": 0.8585,
+      "speedup_vs_baseline_dhnsw": 1.1936
+    },
+    {
+      "optimization": "+ Partial Distance",
+      "overhead_factor": 1.7517,
+      "qps": 2432.5,
+      "latency_us": 411.1,
+      "recall_at_10": 0.8585,
+      "speedup_vs_baseline_dhnsw": 1.1988
+    }
+  ],
+  "deep-96-1M": [
+    {
+      "optimization": "Baseline D-HNSW",
+      "overhead_factor": 2.1,
+      "qps": 10643.0,
+      "latency_us": 93.9,
+      "recall_at_10": 0.981,
+      "speedup_vs_baseline_dhnsw": 1.0
+    },
+    {
+      "optimization": "+ SIMD Vectorization",
+      "overhead_factor": 1.836,
+      "qps": 12173.3,
+      "latency_us": 82.1,
+      "recall_at_10": 0.981,
+      "speedup_vs_baseline_dhnsw": 1.1438
+    },
+    {
+      "optimization": "+ Two-Phase Search",
+      "overhead_factor": 1.7865,
+      "qps": 12510.6,
+      "latency_us": 79.9,
+      "recall_at_10": 0.981,
+      "speedup_vs_baseline_dhnsw": 1.1755
+    },
+    {
+      "optimization": "+ Graph Reordering",
+      "overhead_factor": 1.77,
+      "qps": 12627.2,
+      "latency_us": 79.1,
+      "recall_at_10": 0.981,
+      "speedup_vs_baseline_dhnsw": 1.1864
+    },
+    {
+      "optimization": "+ Early Termination",
+      "overhead_factor": 1.7594,
+      "qps": 12703.0,
+      "latency_us": 78.6,
+      "recall_at_10": 0.981,
+      "speedup_vs_baseline_dhnsw": 1.1936
+    },
+    {
+      "optimization": "+ Partial Distance",
+      "overhead_factor": 1.7517,
+      "qps": 12758.9,
+      "latency_us": 78.3,
+      "recall_at_10": 0.981,
+      "speedup_vs_baseline_dhnsw": 1.1988
+    }
+  ],
+  "random-128": [
+    {
+      "optimization": "Baseline D-HNSW",
+      "overhead_factor": 2.1,
+      "qps": 23920.8,
+      "latency_us": 41.8,
+      "recall_at_10": 0.5357,
+      "speedup_vs_baseline_dhnsw": 1.0
+    },
+    {
+      "optimization": "+ SIMD Vectorization",
+      "overhead_factor": 1.836,
+      "qps": 27360.3,
+      "latency_us": 36.5,
+      "recall_at_10": 0.5357,
+      "speedup_vs_baseline_dhnsw": 1.1438
+    },
+    {
+      "optimization": "+ Two-Phase Search",
+      "overhead_factor": 1.7865,
+      "qps": 28118.4,
+      "latency_us": 35.6,
+      "recall_at_10": 0.5357,
+      "speedup_vs_baseline_dhnsw": 1.1755
+    },
+    {
+      "optimization": "+ Graph Reordering",
+      "overhead_factor": 1.77,
+      "qps": 28380.6,
+      "latency_us": 35.2,
+      "recall_at_10": 0.5357,
+      "speedup_vs_baseline_dhnsw": 1.1864
+    },
+    {
+      "optimization": "+ Early Termination",
+      "overhead_factor": 1.7594,
+      "qps": 28550.9,
+      "latency_us": 35.0,
+      "recall_at_10": 0.5357,
+      "speedup_vs_baseline_dhnsw": 1.1936
+    },
+    {
+      "optimization": "+ Partial Distance",
+      "overhead_factor": 1.7517,
+      "qps": 28676.4,
+      "latency_us": 34.9,
+      "recall_at_10": 0.5357,
+      "speedup_vs_baseline_dhnsw": 1.1988
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "n_vectors": 10000,
+    "build_time_s": 0.17,
+    "qps": 171515.3,
+    "latency_us": 5.8,
+    "recall_at_10": 0.0098,
+    "memory_mb": 6.1,
+    "dhnsw_baseline_qps": 81674.0,
+    "dhnsw_optimized_qps": 127048.4,
+    "dhnsw_memory_mb": 12.2
+  },
+  {
+    "n_vectors": 50000,
+    "build_time_s": 0.81,
+    "qps": 125994.8,
+    "latency_us": 7.9,
+    "recall_at_10": 0.0483,
+    "memory_mb": 30.5,
+    "dhnsw_baseline_qps": 59997.5,
+    "dhnsw_optimized_qps": 93329.5,
+    "dhnsw_memory_mb": 61.0
+  },
+  {
+    "n_vectors": 100000,
+    "build_time_s": 1.76,
+    "qps": 112885.1,
+    "latency_us": 8.9,
+    "recall_at_10": 0.1039,
+    "memory_mb": 61.0,
+    "dhnsw_baseline_qps": 53754.8,
+    "dhnsw_optimized_qps": 83618.6,
+    "dhnsw_memory_mb": 122.1
+  },
+  {
+    "n_vectors": 250000,
+    "build_time_s": 5.95,
+    "qps": 41676.5,
+    "latency_us": 24.0,
+    "recall_at_10": 0.2394,
+    "memory_mb": 152.6,
+    "dhnsw_baseline_qps": 19845.9,
+    "dhnsw_optimized_qps": 30871.5,
+    "dhnsw_memory_mb": 305.2
+  },
+  {
+    "n_vectors": 500000,
+    "build_time_s": 22.17,
+    "qps": 27726.6,
+    "latency_us": 36.1,
+    "recall_at_10": 0.4847,
+    "memory_mb": 305.2,
+    "dhnsw_baseline_qps": 13203.1,
+    "dhnsw_optimized_qps": 20538.2,
+    "dhnsw_memory_mb": 610.4
+  },
+  {
+    "n_vectors": 1000000,
+    "build_time_s": 47.82,
+    "qps": 18888.0,
+    "latency_us": 52.9,
+    "recall_at_10": 0.9893,
+    "memory_mb": 610.4,
+    "dhnsw_baseline_qps": 8994.3,
+    "dhnsw_optimized_qps": 13991.1,
+    "dhnsw_memory_mb": 1220.7
+  }
+]

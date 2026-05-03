@@ -1,0 +1,63 @@
+[package]
+name = "dhnsw"
+version = "0.1.0"
+edition = "2021"
+description = "Deterministic HNSW — Consensus-safe Approximate Nearest Neighbor Search"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+fixed = "1.28"
+serde = { version = "1", features = ["derive"] }
+bincode = "1"
+sha2 = "0.10"
+tiny-keccak = { version = "2", features = ["keccak"] }
+tracing = "0.1"
+rand = { version = "0.8", optional = true }
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+rand = "0.8"
+sha2 = "0.10"
+hex = "0.4"
+
+[features]
+default = []
+simd = []   # enable SIMD-accelerated distance computation
+benchmarks = ["rand"]
+
+[lib]
+name = "dhnsw"
+path = "src/lib.rs"
+
+[[bench]]
+name = "ablation_benchmark"
+harness = false
+
+[[bench]]
+name = "cross_platform_determinism"
+harness = false
+
+[[bench]]
+name = "paper_data_generator"
+harness = false
+
+[[bench]]
+name = "real_dataset_benchmark"
+harness = false
+
+[[bench]]
+name = "cross_arch_verification"
+harness = false
+
+[[bench]]
+name = "batch_insertion_benchmark"
+harness = false
+
+[[bench]]
+name = "llm_embedding_benchmark"
+harness = false
+
+[profile.bench]
+debug = true
+opt-level = 3
+lto = "thin"

@@ -1,0 +1,57 @@
+# D-HNSW Cross-Platform Determinism CI
+# Runs on both x86_64 and ARM64 to verify bit-exact SHA-256 match
+name: Cross-Platform Determinism
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  CARGO_TERM_COLOR: always
+  EXPECTED_HASH: "75c2045c8b48647df7918f5de9cb05ddbbf11c0565cd0ab9f8faef32757f6014"
+
+jobs:
+  determinism-x86_64:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Build (release)
+        run: cargo build --release --features benchmarks
+      - name: Unit Tests
+        run: cargo test --release
+      - name: Determinism Benchmark
+        run: |
+          cargo bench --bench cross_platform_determinism --features benchmarks 2>&1 | tee /tmp/det.log
+          grep -q "$EXPECTED_HASH" /tmp/det.log && echo "PASS: x86_64 hash matches" || (echo "FAIL: hash mismatch" && exit 1)
+      - name: Ablation Benchmark
+        run: cargo bench --bench ablation_benchmark --features benchmarks 2>&1 | head -80
+
+  determinism-arm64:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Build (release)
+        run: cargo build --release --features benchmarks
+      - name: Unit Tests
+        run: cargo test --release
+      - name: Determinism Benchmark
+        run: |
+          cargo bench --bench cross_platform_determinism --features benchmarks 2>&1 | tee /tmp/det.log
+          grep -q "$EXPECTED_HASH" /tmp/det.log && echo "PASS: ARM64 hash matches x86_64" || (echo "FAIL: cross-platform hash mismatch" && exit 1)
+      - name: Ablation Benchmark
+        run: cargo bench --bench ablation_benchmark --features benchmarks 2>&1 | head -80
+
+  verify-hashes:
+    needs: [determinism-x86_64, determinism-arm64]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cross-Platform Verification Complete
+        run: |
+          echo "=================================================="
+          echo " D-HNSW Cross-Platform Determinism: VERIFIED"
+          echo " x86_64 and ARM64 produce identical SHA-256 hash:"
+          echo " $EXPECTED_HASH"
+          echo "=================================================="
