@@ -129,7 +129,7 @@ unsafe fn squared_distance_avx2(a: &[I64F32], b: &[I64F32]) -> I64F32 {
     for i in (chunks * 4)..len {
         let a_raw = *a_ptr.add(i);
         let b_raw = *b_ptr.add(i);
-        let diff = a_raw.wrapping_sub(b_raw);
+        let diff = a_raw.saturating_sub(b_raw);
         let prod = (diff as i128) * (diff as i128);
         let prod_shifted = prod >> 32;
         sum_accum = sum_accum.saturating_add(prod_shifted);

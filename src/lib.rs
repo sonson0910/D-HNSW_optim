@@ -81,6 +81,12 @@ pub const EF_CONSTRUCTION: usize = 200;
 /// factor M at each higher level, creating the hierarchical structure.
 ///
 /// For M = 16: ml ≈ 1 / ln(16) ≈ 0.3607
+///
+/// **LEGACY NOTE**: This function returns `f64` and is NOT used in the
+/// consensus-critical level assignment path. `DeterministicRng::next_level()`
+/// uses a purely integer-based geometric distribution derived from Keccak-256
+/// hashes, ensuring bit-exact determinism across platforms. This function is
+/// retained only for API compatibility and non-critical diagnostic purposes.
 #[inline]
 pub fn ml() -> f64 {
     1.0 / (M as f64).ln()

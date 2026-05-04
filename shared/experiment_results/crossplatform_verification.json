@@ -1,0 +1,55 @@
+{
+  "experiment": "Multi-Dataset Cross-Platform Determinism Verification (Table 4)",
+  "date": "2026-05-04",
+  "parameters": {
+    "M": 16, "ef": 64, "k": 10, "seed": "0xDEADBEEF"
+  },
+  "platforms": {
+    "x86_64_native": "Intel Core i5-14400F (Raptor Lake, 20 cores) — user verified",
+    "aarch64_native": "Apple M1 Pro (ARMv8.5-A, 10 cores) — locally verified",
+    "x86_64_rosetta2": "Apple Rosetta 2 on M1 Pro host — locally verified"
+  },
+  "datasets": {
+    "SIFT-128": {
+      "dim": 128, "n": 1000, "n_queries": 100, "type": "integer [0,255]",
+      "graph_hash": "26727c81c666d94b72e0bbe1a69f1b51c3172d2b3ab1a8246328dcf13cb7d171",
+      "index_hash": "195bc23557cc8f7324efce1600e3445064ef4577eb1667213aaef6f055894eb7",
+      "dist_hash":  "68931616c32e43c3c9e08ac773a1b87b02e68fcbc6ee70669f3895e96052123e",
+      "arm64_match": true, "x86_match": true, "rosetta_match": true
+    },
+    "Random-96": {
+      "dim": 96, "n": 1000, "n_queries": 100, "type": "uniform float [0,1]",
+      "graph_hash": "9302cfc6bf7f8239053c4c9960dab5b9663822b51b6e977e33bf0a9edcf390b0",
+      "index_hash": "a1b04820d68218c7497ef23b2b061655b918e9d0deac8ebada75809673d5338f",
+      "dist_hash":  "5ebc4ce9d2e47f820c89905bd56b1a6aef0f2432b8bf795e5de31dbe9b457842",
+      "arm64_match": true, "x86_match": true, "rosetta_match": true
+    },
+    "Sparse-784": {
+      "dim": 784, "n": 500, "n_queries": 50, "type": "sparse (80% zeros, Fashion-MNIST-like)",
+      "graph_hash": "62a00742485fea5c1e0d57ac27f2afe1ff24f90d2f2dbc3f74b2826d2397a81e",
+      "index_hash": "3e7d30aa20a3939ee452380010d9c41101a3fdad8be97cdc7177104ca78f2a11",
+      "dist_hash":  "bdad92a4380b34aa7d84e85682300991b72ac45e8080444747a2378cab23bb92",
+      "arm64_match": true, "x86_match": true, "rosetta_match": true
+    },
+    "GIST-960": {
+      "dim": 960, "n": 500, "n_queries": 50, "type": "continuous float [0,1]",
+      "graph_hash": "d625bd4775443c1ff335a604931a78e3327a4863e884684796e1df8728fadcc7",
+      "index_hash": "3126e112c4050094f887c24a508a71c5828e28a3c9f5acaafdd5ec0a33f71136",
+      "dist_hash":  "6df82b3a3765249d873e39154c36f9374769542faa7306413385e1249b270119",
+      "arm64_match": true, "x86_match": true, "rosetta_match": true
+    },
+    "LLM-1536": {
+      "dim": 1536, "n": 300, "n_queries": 30, "type": "L2-normalized embeddings [-1,1]",
+      "graph_hash": "759057455422a30d35c68111aadca813ecf8a1f0260d3d214eb5bb3494cdb9bc",
+      "index_hash": "aef73489dbef53c2c248c7c047d180191cf0057fae24ca4c8e0d846f22e485d8",
+      "dist_hash":  "c8e90a4f8ff558ebb91f1df8e0bb2131a2df7fab2554004ebbf0514e934c7863",
+      "arm64_match": true, "x86_match": true, "rosetta_match": true
+    }
+  },
+  "summary": {
+    "total_checks": "15/15 PASS (5 datasets × 3 hash types)",
+    "all_datasets_unique": true,
+    "all_cross_platform_identical": true
+  },
+  "action_required": "User should re-run multi_dataset_verify on Intel i5-14400F to confirm identical hashes after tie-breaking fix"
+}

@@ -27,7 +27,7 @@ pub type I64F32 = FixedI64<fixed::types::extra::U32>;
 
 /// A D-dimensional vector using I64F32 fixed-point arithmetic.
 ///
-/// Each component is stored as `I64F32` (64 integer bits, 32 fractional bits),
+/// Each component is stored as `I64F32` (32 integer bits, 32 fractional bits),
 /// providing approximately 9 decimal digits of precision while maintaining
 /// perfect cross-platform determinism.
 #[derive(Clone, Debug)]

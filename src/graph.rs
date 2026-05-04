@@ -102,8 +102,13 @@ impl PartialOrd for Candidate {
 
 impl Ord for Candidate {
     fn cmp(&self, other: &Self) -> Ordering {
-        // Reverse order for min-heap (smaller distance = higher priority)
-        other.distance.partial_cmp(&self.distance).unwrap_or(Ordering::Equal)
+        // Reverse order for min-heap (smaller distance = higher priority).
+        // DETERMINISM: When distances are equal, break ties by node ID
+        // (higher ID = lower priority in min-heap, so use other.id vs self.id).
+        // This guarantees bit-exact ordering across all platforms (Theorem 7).
+        other.distance.partial_cmp(&self.distance)
+            .unwrap_or(Ordering::Equal)
+            .then_with(|| other.id.cmp(&self.id))
     }
 }
 
@@ -127,8 +132,12 @@ impl PartialOrd for FurthestCandidate {
 
 impl Ord for FurthestCandidate {
     fn cmp(&self, other: &Self) -> Ordering {
-        // Normal order for max-heap (larger distance = higher priority)
-        self.0.distance.partial_cmp(&other.0.distance).unwrap_or(Ordering::Equal)
+        // Normal order for max-heap (larger distance = higher priority).
+        // DETERMINISM: When distances are equal, break ties by node ID
+        // (smaller ID = lower priority in max-heap, so use self.id vs other.id).
+        self.0.distance.partial_cmp(&other.0.distance)
+            .unwrap_or(Ordering::Equal)
+            .then_with(|| self.0.id.cmp(&other.0.id))
     }
 }
 
@@ -825,9 +834,15 @@ impl<const D: usize> HnswGraph<D> {
         candidates: &[Candidate],
         max_count: usize,
     ) -> Vec<usize> {
-        // Simple selection: take the closest ones
+        // Simple selection: take the closest ones.
+        // DETERMINISM: sort by (distance ASC, id ASC) to ensure identical
+        // neighbor selection when distances are equal (paper Section VI-B).
         let mut sorted: Vec<Candidate> = candidates.to_vec();
-        sorted.sort_by(|a, b| a.distance.partial_cmp(&b.distance).unwrap_or(Ordering::Equal));
+        sorted.sort_by(|a, b| {
+            a.distance.partial_cmp(&b.distance)
+                .unwrap_or(Ordering::Equal)
+                .then_with(|| a.id.cmp(&b.id))
+        });
         sorted.into_iter().take(max_count).map(|c| c.id).collect()
     }
 
@@ -1041,5 +1056,74 @@ mod tests {
     fn test_delete_invalid_id() {
         let graph: HnswGraph<3> = HnswGraph::new();
         assert!(graph.is_deleted(999).is_none());
+    }
+
+    /// Verify that search results are deterministic when multiple vectors
+    /// are equidistant from the query. This validates the tie-breaking fix
+    /// described in paper Section VI-B: (d₁, id₁) < (d₂, id₂) iff
+    /// d₁ < d₂ ∨ (d₁ = d₂ ∧ id₁ < id₂).
+    #[test]
+    fn test_equal_distance_determinism() {
+        let mut graph: HnswGraph<3> = HnswGraph::new();
+        let mut rng = create_test_rng();
+
+        // Insert vectors that are equidistant from the origin:
+        // v0 = (1, 0, 0), v1 = (0, 1, 0), v2 = (0, 0, 1)
+        // All have squared_distance = 1.0 from (0,0,0)
+        let v0 = FixedPointVector::from_f32_slice(&[1.0, 0.0, 0.0]).unwrap();
+        let v1 = FixedPointVector::from_f32_slice(&[0.0, 1.0, 0.0]).unwrap();
+        let v2 = FixedPointVector::from_f32_slice(&[0.0, 0.0, 1.0]).unwrap();
+
+        // Verify they are indeed equidistant from origin
+        let origin = FixedPointVector::from_f32_slice(&[0.0, 0.0, 0.0]).unwrap();
+        let d0 = origin.squared_distance(&v0);
+        let d1 = origin.squared_distance(&v1);
+        let d2 = origin.squared_distance(&v2);
+        assert_eq!(d0, d1, "v0 and v1 should be equidistant from origin");
+        assert_eq!(d1, d2, "v1 and v2 should be equidistant from origin");
+
+        graph.insert(v0, &mut rng).unwrap();
+        graph.insert(v1, &mut rng).unwrap();
+        graph.insert(v2, &mut rng).unwrap();
+
+        // Search from origin — all 3 are equidistant
+        let query = FixedPointVector::from_f32_slice(&[0.0, 0.0, 0.0]).unwrap();
+
+        // Run search multiple times and verify identical ordering
+        let results1 = graph.search(&query, 3, 10).unwrap();
+        let results2 = graph.search(&query, 3, 10).unwrap();
+        let results3 = graph.search(&query, 3, 10).unwrap();
+
+        let ids1: Vec<usize> = results1.iter().map(|(id, _)| *id).collect();
+        let ids2: Vec<usize> = results2.iter().map(|(id, _)| *id).collect();
+        let ids3: Vec<usize> = results3.iter().map(|(id, _)| *id).collect();
+
+        assert_eq!(ids1, ids2, "Search results must be deterministic (run 1 vs 2)");
+        assert_eq!(ids2, ids3, "Search results must be deterministic (run 2 vs 3)");
+    }
+
+    /// Verify Candidate ordering is total and deterministic, especially for
+    /// equal distances. BinaryHeap relies on Ord being a total order.
+    #[test]
+    fn test_candidate_tiebreak_ordering() {
+        use std::collections::BinaryHeap;
+
+        // Create candidates with identical distances but different IDs
+        let dist = I64F32::from_num(42);
+        let c0 = Candidate { id: 0, distance: dist };
+        let c1 = Candidate { id: 1, distance: dist };
+        let c2 = Candidate { id: 2, distance: dist };
+
+        // Push into min-heap (Candidate uses reversed ordering)
+        let mut heap = BinaryHeap::new();
+        heap.push(c2.clone());
+        heap.push(c0.clone());
+        heap.push(c1.clone());
+
+        // Extract: should come out in deterministic order (smallest ID first
+        // for min-heap, since we reverse by distance AND by ID)
+        let extracted: Vec<usize> = std::iter::from_fn(|| heap.pop().map(|c| c.id)).collect();
+        assert_eq!(extracted, vec![0, 1, 2],
+            "Min-heap should extract equal-distance candidates in ascending ID order");
     }
 }
