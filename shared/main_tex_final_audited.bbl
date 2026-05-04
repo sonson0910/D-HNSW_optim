@@ -169,12 +169,6 @@ B.~Schoenmakers, ``Fixed-point arithmetic for privacy-preserving computation,''
   \emph{Journal of Cryptographic Engineering}, vol.~13, no.~1, pp. 45--62,
   2023.
 
-\bibitem{jegou2011sift}
-H.~J{\'e}gou, M.~Douze, and C.~Schmid, ``Product quantization for nearest
-  neighbor search,'' \emph{IEEE Transactions on Pattern Analysis and Machine
-  Intelligence}, vol.~33, no.~1, pp. 117--128, 2011, introduces the SIFT-1M
-  benchmark dataset.
-
 \bibitem{pennington2014glove}
 J.~Pennington, R.~Socher, and C.~D. Manning, ``Glove: Global vectors for word
   representation,'' in \emph{Proceedings of the 2014 Conference on Empirical
